@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>矯正治療安全指南｜氧樂多牙醫診所</title>
+<meta name="description" content="台灣齒顎矯正患者完整安全指南：風險評估、問卷工具、法律資訊、申訴指南。由趙哲暘醫師整理。">
+<style>
+:root {
+  --primary: #1a6b5a;
+  --primary-light: #2ecc71;
+  --primary-dark: #14503f;
+  --accent: #e74c3c;
+  --bg: #f8fffe;
+  --card-bg: #ffffff;
+  --text: #2c3e50;
+  --text-light: #7f8c8d;
+  --border: #e0f0eb;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Noto Sans TC',system-ui,sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.7;}
+a{color:var(--primary);text-decoration:none;}
+a:hover{text-decoration:underline;}
+
+/* NAV */
+nav{background:var(--primary);position:sticky;top:0;z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,.2);}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 20px;}
+.nav-logo{color:white;font-size:17px;font-weight:700;padding:14px 0;white-space:nowrap;}
+.nav-links{display:flex;gap:2px;flex-wrap:wrap;}
+.nav-links a{color:rgba(255,255,255,.85);padding:14px 10px;font-size:13px;transition:.2s;}
+.nav-links a:hover,.nav-links a.active{color:white;background:rgba(255,255,255,.15);border-radius:4px;text-decoration:none;}
+.hamburger{display:none;background:none;border:none;color:white;font-size:22px;cursor:pointer;padding:10px;}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary) 60%,#2ecc71 100%);color:white;padding:60px 20px 50px;text-align:center;}
+.hero h1{font-size:28px;font-weight:700;margin-bottom:12px;}
+.hero p{font-size:16px;opacity:.9;max-width:640px;margin:0 auto 24px;}
+.hero-badges{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;}
+.badge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:5px 14px;font-size:13px;}
+
+/* SECTIONS */
+.section{display:none;max-width:1100px;margin:0 auto;padding:30px 20px 60px;}
+.section.active{display:block;}
+.section-title{font-size:22px;font-weight:700;color:var(--primary);border-left:5px solid var(--primary);padding-left:14px;margin-bottom:24px;}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;margin-top:20px;}
+.card{background:var(--card-bg);border-radius:12px;padding:24px;border:1px solid var(--border);box-shadow:0 2px 10px rgba(0,0,0,.05);transition:.2s;}
+.card:hover{box-shadow:0 4px 20px rgba(26,107,90,.12);}
+.card-icon{font-size:28px;margin-bottom:10px;}
+.card h3{font-size:16px;font-weight:700;color:var(--primary);margin-bottom:8px;}
+.card p{font-size:13px;color:var(--text-light);line-height:1.6;}
+
+/* DOWNLOAD BUTTONS */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;transition:.2s;border:none;}
+.btn-primary{background:var(--primary);color:white;}
+.btn-primary:hover{background:var(--primary-dark);text-decoration:none;color:white;}
+.btn-secondary{background:white;color:var(--primary);border:2px solid var(--primary);}
+.btn-secondary:hover{background:var(--primary);color:white;text-decoration:none;}
+.btn-danger{background:#e74c3c;color:white;}
+.btn-danger:hover{background:#c0392b;text-decoration:none;color:white;}
+
+/* DOWNLOAD SECTION */
+.download-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-top:20px;}
+.download-card{background:white;border:1px solid var(--border);border-radius:10px;padding:20px;display:flex;flex-direction:column;gap:12px;}
+.download-card h4{font-size:14px;font-weight:700;color:var(--text);}
+.download-card p{font-size:12px;color:var(--text-light);}
+.download-meta{font-size:11px;color:var(--text-light);}
+
+/* QUESTIONNAIRE */
+.quiz-container{background:white;border-radius:12px;padding:28px;border:1px solid var(--border);margin-bottom:24px;}
+.quiz-title{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:6px;}
+.quiz-desc{font-size:13px;color:var(--text-light);margin-bottom:20px;}
+.quiz-section-label{font-size:13px;font-weight:700;color:var(--primary);background:#f0f9f6;padding:8px 12px;border-radius:6px;margin:16px 0 10px;}
+.question{margin-bottom:16px;padding:14px;background:#fafafa;border-radius:8px;border-left:3px solid var(--border);}
+.question p{font-size:14px;font-weight:600;margin-bottom:10px;}
+.options{display:flex;flex-wrap:wrap;gap:8px;}
+.option-btn{padding:6px 14px;border:1.5px solid #ccc;border-radius:20px;background:white;cursor:pointer;font-size:13px;transition:.2s;}
+.option-btn:hover{border-color:var(--primary);color:var(--primary);}
+.option-btn.selected{background:var(--primary);color:white;border-color:var(--primary);}
+.option-btn.selected-yes{background:#e74c3c;color:white;border-color:#e74c3c;}
+.quiz-actions{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;}
+
+/* RESULT BOX */
+.result-box{border-radius:10px;padding:20px;margin-top:20px;display:none;}
+.result-box.low{background:#d5f5e3;border:1px solid #27ae60;}
+.result-box.mid{background:#fef9e7;border:1px solid #f39c12;}
+.result-box.high{background:#fdedec;border:1px solid #e74c3c;}
+.result-box h3{font-size:17px;font-weight:700;margin-bottom:8px;}
+.result-score{font-size:32px;font-weight:900;display:block;margin-bottom:4px;}
+
+/* INFO BOXES */
+.info-box{background:#f0f9f6;border-left:4px solid var(--primary);padding:16px;border-radius:0 8px 8px 0;margin:16px 0;font-size:14px;}
+.warn-box{background:#fef9e7;border-left:4px solid #f39c12;padding:16px;border-radius:0 8px 8px 0;margin:16px 0;font-size:14px;}
+.danger-box{background:#fdedec;border-left:4px solid #e74c3c;padding:16px;border-radius:0 8px 8px 0;margin:16px 0;font-size:14px;}
+
+/* LEGAL TABLE */
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;}
+th{background:var(--primary);color:white;padding:10px 12px;text-align:left;}
+td{padding:9px 12px;border-bottom:1px solid var(--border);}
+tr:nth-child(even) td{background:#f8fffe;}
+
+/* CONTACT TABLE */
+.contact-table td:first-child{font-weight:600;color:var(--primary);}
+
+/* CHECKLIST */
+.checklist{list-style:none;}
+.checklist li{padding:8px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:10px;font-size:14px;}
+.checklist li:last-child{border-bottom:none;}
+.check-box{width:20px;height:20px;border:2px solid var(--primary);border-radius:4px;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:.2s;margin-top:1px;}
+.check-box.checked{background:var(--primary);color:white;}
+.check-label{flex:1;}
+
+/* TABS */
+.tabs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:20px;}
+.tab-btn{padding:8px 18px;border:1.5px solid var(--border);border-radius:20px;background:white;cursor:pointer;font-size:13px;font-weight:600;color:var(--text-light);transition:.2s;}
+.tab-btn.active{background:var(--primary);color:white;border-color:var(--primary);}
+.tab-content{display:none;}
+.tab-content.active{display:block;}
+
+/* SCORE SUMMARY */
+.score-summary{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px;margin:16px 0;}
+.score-item{background:white;border:1px solid var(--border);border-radius:8px;padding:14px;text-align:center;}
+.score-item .num{font-size:28px;font-weight:900;color:var(--primary);}
+.score-item .label{font-size:12px;color:var(--text-light);}
+
+/* PROGRESS */
+.progress-bar{background:#e0f0eb;border-radius:10px;height:8px;overflow:hidden;margin-top:8px;}
+.progress-fill{background:var(--primary);height:100%;border-radius:10px;transition:width .5s ease;}
+
+/* ACCORDION */
+.accordion{border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:12px;}
+.accordion-header{padding:16px 20px;background:white;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:15px;}
+.accordion-header:hover{background:#f0f9f6;}
+.accordion-body{padding:0 20px;max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.accordion-body.open{max-height:2000px;padding:16px 20px;}
+.accordion-arrow{transition:.3s;font-size:12px;}
+.accordion-header.open .accordion-arrow{transform:rotate(180deg);}
+
+/* FOOTER */
+footer{background:var(--primary-dark);color:rgba(255,255,255,.8);text-align:center;padding:30px 20px;font-size:13px;margin-top:40px;}
+footer strong{color:white;}
+
+/* RESPONSIVE */
+@media(max-width:680px){
+  .nav-links{display:none;flex-direction:column;width:100%;background:var(--primary-dark);}
+  .nav-links.open{display:flex;}
+  .nav-links a{padding:12px 20px;border-bottom:1px solid rgba(255,255,255,.1);}
+  .nav-inner{flex-wrap:wrap;}
+  .hamburger{display:block;}
+  .hero h1{font-size:22px;}
+  .hero p{font-size:14px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">🦷 矯正安全指南</div>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#" onclick="showSection('home')" class="active" id="nav-home">首頁</a>
+      <a href="#" onclick="showSection('reports')" id="nav-reports">安全報告</a>
+      <a href="#" onclick="showSection('questionnaire')" id="nav-questionnaire">評估問卷</a>
+      <a href="#" onclick="showSection('doctor-check')" id="nav-doctor-check">醫師驗證</a>
+      <a href="#" onclick="showSection('legal')" id="nav-legal">法律資訊</a>
+      <a href="#" onclick="showSection('complaint')" id="nav-complaint">申訴指南</a>
+      <a href="#" onclick="showSection('downloads')" id="nav-downloads">下載資源</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>🦷 矯正治療前安全自評指南</h1>
+  <p>台灣齒顎矯正患者的完整保護資源<br>由 <strong>氧樂多牙醫診所｜趙哲暘醫師</strong> 整理，基於最新國際學術研究</p>
+  <div class="hero-badges">
+    <span class="badge">📚 三層深度報告</span>
+    <span class="badge">📋 互動評估問卷</span>
+    <span class="badge">⚖️ 法律分析</span>
+    <span class="badge">📞 申訴指南</span>
+    <span class="badge">📄 PDF 下載</span>
+  </div>
+</div>
+
+<!-- ========== HOME ========== -->
+<div id="section-home" class="section active">
+  <div class="warn-box">
+    ⚠️ <strong>本網站純為教育用途</strong>，所有資訊不構成醫療或法律建議。具體診療決策請諮詢合格牙醫師；法律問題請諮詢執業律師。
+  </div>
+
+  <h2 class="section-title">🎯 為什麼矯正前的安全評估很重要？</h2>
+  <div class="info-box">
+    <strong>關鍵數據</strong>：研究顯示，在未接受矯正的成年人中，有 <strong>26–59%</strong> 至少有一種顳顎關節症狀（TMD）。當矯正治療未遵循功能性咬合原則時，高達 <strong>30%</strong> 的 TMD 案例具有醫源性成因——也就是說，部分案例是因為治療操作不當所引發的。
+  </div>
+
+  <div class="cards">
+    <div class="card" onclick="showSection('reports')">
+      <div class="card-icon">📖</div>
+      <h3>三層深度安全報告</h3>
+      <p>入門版（高中生程度）、進階版（一般成人）、專業版（醫療背景），選擇最適合您的深度閱讀。</p>
+      <br><a href="#" onclick="showSection('reports');return false;" class="btn btn-primary" style="font-size:13px;padding:8px 16px;">查看報告 →</a>
+    </div>
+    <div class="card" onclick="showSection('questionnaire')">
+      <div class="card-icon">📋</div>
+      <h3>互動評估問卷</h3>
+      <p>5種問卷：30題綜合風險自評、STOP-BANG 睡眠篩檢、TMD 顳顎關節篩檢、知情同意確認、治療追蹤問卷。</p>
+      <br><a href="#" onclick="showSection('questionnaire');return false;" class="btn btn-primary" style="font-size:13px;padding:8px 16px;">開始評估 →</a>
+    </div>
+    <div class="card" onclick="showSection('doctor-check')">
+      <div class="card-icon">🔍</div>
+      <h3>醫師安全知識驗證</h3>
+      <p>提供具體問題清單，幫助您在初診時評估醫師的安全意識，確認治療計劃是否完整。</p>
+      <br><a href="#" onclick="showSection('doctor-check');return false;" class="btn btn-primary" style="font-size:13px;padding:8px 16px;">驗證醫師 →</a>
+    </div>
+    <div class="card" onclick="showSection('legal')">
+      <div class="card-icon">⚖️</div>
+      <h3>法律責任分析</h3>
+      <p>客觀嚴謹分析矯正安全評估不足在台灣法律體系下的責任認定，包含民法、醫療法、刑法層面。</p>
+      <br><a href="#" onclick="showSection('legal');return false;" class="btn btn-primary" style="font-size:13px;padding:8px 16px;">了解法律 →</a>
+    </div>
+    <div class="card" onclick="showSection('complaint')">
+      <div class="card-icon">📞</div>
+      <h3>申訴與自我保護指南</h3>
+      <p>從治療前預防、治療中監控，到發生糾紛後的完整申訴流程。含各縣市衛生局聯絡方式。</p>
+      <br><a href="#" onclick="showSection('complaint');return false;" class="btn btn-primary" style="font-size:13px;padding:8px 16px;">查看指南 →</a>
+    </div>
+    <div class="card" onclick="showSection('downloads')">
+      <div class="card-icon">📄</div>
+      <h3>PDF 下載資源</h3>
+      <p>所有報告與工具均提供 PDF 格式免費下載，可列印後攜帶至診所諮詢使用。</p>
+      <br><a href="#" onclick="showSection('downloads');return false;" class="btn btn-primary" style="font-size:13px;padding:8px 16px;">下載資料 →</a>
+    </div>
+  </div>
+
+  <br>
+  <h2 class="section-title">📊 關鍵研究數據</h2>
+  <div class="score-summary">
+    <div class="score-item"><div class="num">91%</div><div class="label">STOP-BANG 問卷篩檢 OSA 敏感度</div></div>
+    <div class="score-item"><div class="num">26–59%</div><div class="label">成年人中有 TMD 症狀的比例</div></div>
+    <div class="score-item"><div class="num">1–5%</div><div class="label">嚴重牙根外吸收（>4mm）發生率</div></div>
+    <div class="score-item"><div class="num">83%</div><div class="label">患者未被完整告知牙根吸收風險</div></div>
+    <div class="score-item"><div class="num">34%</div><div class="label">患者了解復發需長期配戴維持器</div></div>
+    <div class="score-item"><div class="num">30%</div><div class="label">TMD 案例有醫源性成因</div></div>
+  </div>
+
+  <br>
+  <div class="info-box">
+    <strong>研究基礎</strong>：本網站所有內容基於 SciSpace 平台查詢 456 篇 2018–2024 年國際學術論文，涵蓋 TMJ 評估、睡眠呼吸道、牙根外吸收、下顎位置、知情同意等五大主題。
+  </div>
+</div>
+
+<!-- ========== REPORTS ========== -->
+<div id="section-reports" class="section">
+  <h2 class="section-title">📖 矯正治療前安全自評報告</h2>
+  <p style="margin-bottom:20px;color:var(--text-light);">請選擇最適合您背景的版本。三份報告涵蓋相同的核心評估內容，但深度與呈現方式不同。</p>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('reports','tab-beginner',this)">📗 入門版</button>
+    <button class="tab-btn" onclick="switchTab('reports','tab-advanced',this)">📘 進階版</button>
+    <button class="tab-btn" onclick="switchTab('reports','tab-expert',this)">📕 專業版</button>
+  </div>
+
+  <!-- Beginner -->
+  <div id="tab-beginner" class="tab-content active">
+    <div class="download-card" style="flex-direction:row;align-items:center;margin-bottom:16px;">
+      <div style="flex:1">
+        <h4>入門版｜適合高中程度</h4>
+        <p style="font-size:13px;color:var(--text-light);">用生活化比喻說明矯正前評估，閱讀時間約5分鐘。包含30題自評問卷。</p>
+      </div>
+      <a href="report-beginner.pdf" download class="btn btn-primary">⬇ 下載 PDF</a>
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">▶ 什麼是矯正安全評估？<span class="accordion-arrow">▼</span></div>
+      <div class="accordion-body">
+        <p>矯正治療就像幫牙齒「重新規劃路線」，但在開工前，需要先確認地基是否穩固。安全評估有三大核心：</p>
+        <ul style="margin:10px 0 0 20px;">
+          <li><strong>呼吸道檢查</strong>：確認治療計劃不影響您的呼吸與睡眠品質</li>
+          <li><strong>顳顎關節（TMJ）評估</strong>：確認下巴關節沒有既有問題</li>
+          <li><strong>下顎位置分析</strong>：確認咬合與骨骼的基準點正確</li>
+        </ul>
+      </div>
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">▶ 矯正可能有哪些風險？<span class="accordion-arrow">▼</span></div>
+      <div class="accordion-body">
+        <table>
+          <tr><th>風險</th><th>發生率</th><th>說明</th></tr>
+          <tr><td>牙根縮短（EARR）</td><td>輕微：大多數；嚴重：1–5%</td><td>牙根在矯正力量下可能稍微縮短</td></tr>
+          <tr><td>TMD 加重</td><td>視個案</td><td>有既有 TMJ 問題者風險較高</td></tr>
+          <tr><td>齒列復發</td><td>不戴維持器時高</td><td>需終身配戴維持器</td></tr>
+          <tr><td>齲齒/脫鈣</td><td>可預防</td><td>矯正期間清潔更費力</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">▶ 初診前應準備什麼問題？<span class="accordion-arrow">▼</span></div>
+      <div class="accordion-body">
+        <ul style="margin:0 0 0 20px;">
+          <li>「您會幫我評估顳顎關節嗎？」</li>
+          <li>「我的呼吸道狀況會影響矯正計劃嗎？」</li>
+          <li>「我的牙根吸收風險如何？如何監測？」</li>
+          <li>「矯正完成後維持器要戴多久？費用是否包含？」</li>
+          <li>「您能提供書面的個人風險說明嗎？」</li>
+        </ul>
+      </div>
+    </div>
+    <div class="info-box" style="margin-top:20px;">
+      💡 完整的30題評估問卷請前往 <a href="#" onclick="showSection('questionnaire');return false;">評估問卷</a> 頁面進行互動評估，並可將結果列印帶去初診。
+    </div>
+  </div>
+
+  <!-- Advanced -->
+  <div id="tab-advanced" class="tab-content">
+    <div class="download-card" style="flex-direction:row;align-items:center;margin-bottom:16px;">
+      <div style="flex:1">
+        <h4>進階版｜適合一般成人</h4>
+        <p style="font-size:13px;color:var(--text-light);">包含臨床數據與研究支持，閱讀時間約10分鐘。附30題自評問卷與就診準備建議。</p>
+      </div>
+      <a href="report-advanced.pdf" download class="btn btn-primary">⬇ 下載 PDF</a>
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">▶ 呼吸道評估：為什麼矯正醫師需要評估呼吸？<span class="accordion-arrow">▼</span></div>
+      <div class="accordion-body">
+        <p>矯正醫師因其對顱顏解剖的專業，是最有能力在早期發現上呼吸道問題的牙科醫師。</p>
+        <table>
+          <tr><th>工具</th><th>敏感度</th><th>說明</th></tr>
+          <tr><td><strong>STOP-BANG 問卷</strong></td><td>91.23%</td><td>8題快速篩檢 OSA，優於 Epworth 量表</td></tr>
+          <tr><td>Epworth 嗜睡量表</td><td>70.18%</td><td>評估白天嗜睡程度</td></tr>
+          <tr><td>Mallampati 評分</td><td>需合併鼻道評估</td><td>單獨使用預測性低</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">▶ TMJ 評估：關鍵數據<span class="accordion-arrow">▼</span></div>
+      <div class="accordion-body">
+        <p>在正確的功能性咬合原則下，傳統矯正治療被證實對 TMJ 影響為中性（neutral impact）。但若治療忽視功能性咬合原則，可能誘發或加重 TMD。</p>
+        <div class="warn-box">⚠️ 治療前若確認有 TMD，應先以保守治療（咬合板、物理治療）處理後，再開始矯正。</div>
+      </div>
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">▶ 就診前準備建議<span class="accordion-arrow">▼</span></div>
+      <div class="accordion-body">
+        <ol style="margin:0 0 0 20px;">
+          <li>將30題自評的「是」項整理成清單帶去初診</li>
+          <li>詢問醫師是否進行呼吸道、TMJ、下顎位置完整評估</li>
+          <li>要求醫師說明您個人的風險等級</li>
+          <li>若治療涉及拔牙，詢問對臉型和呼吸道的評估</li>
+          <li>確認維持器計劃（種類、期間、費用）</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- Expert -->
+  <div id="tab-expert" class="tab-content">
+    <div class="download-card" style="flex-direction:row;align-items:center;margin-bottom:16px;">
+      <div style="flex:1">
+        <h4>專業版｜適合醫療背景讀者</h4>
+        <p style="font-size:13px;color:var(--text-light);">完整 OR/CI 值、DC/TMD 標準、決策樹、SciSpace 文獻回顧。閱讀時間約20分鐘。</p>
+      </div>
+      <a href="report-expert.pdf" download class="btn btn-primary">⬇ 下載 PDF</a>
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">▶ SciSpace 文獻回顧摘要（456篇）<span class="accordion-arrow">▼</span></div>
+      <div class="accordion-body">
+        <table>
+          <tr><th>研究主題</th><th>關鍵發現</th><th>效應量</th></tr>
+          <tr><td>TMD 風險</td><td>矯正治療前 TMD 的優勢比</td><td>OR 1.84（95% CI: 1.23–2.75）</td></tr>
+          <tr><td>STOP-BANG 敏感度</td><td>OSA 篩檢工具驗證</td><td>91.23%（優於 Epworth 70.18%）</td></tr>
+          <tr><td>EARR 牙根外吸收</td><td>矯正後牙根縮短量</td><td>pooled mean 0.79–0.80 mm</td></tr>
+          <tr><td>CR vs IOR 咬合比較</td><td>正顎手術前後髁突位置</td><td>SMD 0.63–0.80</td></tr>
+          <tr><td>知情同意</td><td>未被告知牙根吸收風險</td><td>83.4% 患者；34% 了解復發</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">▶ 六階段整合評估協議<span class="accordion-arrow">▼</span></div>
+      <div class="accordion-body">
+        <ol style="margin:0 0 0 20px;line-height:2;">
+          <li><strong>系統性病史問診</strong>：STOP-BANG、TMD 症狀、藥物史</li>
+          <li><strong>顱面影像分析</strong>：側顱X光、Panoramic、必要時 CBCT</li>
+          <li><strong>TMJ 臨床評估</strong>：依 DC/TMD Axis I 完整記錄</li>
+          <li><strong>下顎位置確認</strong>：CR 位咬合記錄、Tekscan 評估</li>
+          <li><strong>呼吸道評估</strong>：鼻道通暢度、咽喉空間、RME 適應症評估</li>
+          <li><strong>個人化知情同意</strong>：書面風險說明，含 EARR 風險分層</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== QUESTIONNAIRE ========== -->
+<div id="section-questionnaire" class="section">
+  <h2 class="section-title">📋 互動評估問卷</h2>
+  <p style="margin-bottom:20px;color:var(--text-light);">請選擇問卷類型。完成後可將結果截圖或列印，攜帶至初診諮詢。</p>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('quiz','quiz-30',this)">🔢 30題綜合評估</button>
+    <button class="tab-btn" onclick="switchTab('quiz','quiz-stopbang',this)">😴 STOP-BANG</button>
+    <button class="tab-btn" onclick="switchTab('quiz','quiz-tmd',this)">🦷 TMJ 篩檢</button>
+    <button class="tab-btn" onclick="switchTab('quiz','quiz-consent',this)">📝 知情同意確認</button>
+    <button class="tab-btn" onclick="switchTab('quiz','quiz-tracking',this)">📅 治療追蹤</button>
+  </div>
+
+  <!-- 30-question -->
+  <div id="quiz-30" class="tab-content active">
+    <div class="quiz-container">
+      <div class="quiz-title">矯正治療前30題綜合風險自評</div>
+      <div class="quiz-desc">每題回答「是」計1分。0–5分低風險，6–12分中風險，13分以上高風險。<br>預計完成時間：約5分鐘</div>
+
+      <div class="quiz-section-label">A類：呼吸道與睡眠（6題）</div>
+      <div id="q30-questions"></div>
+
+      <div class="quiz-actions">
+        <button class="btn btn-primary" onclick="calc30()">📊 計算結果</button>
+        <button class="btn btn-secondary" onclick="reset30()">🔄 重新填寫</button>
+        <button class="btn btn-secondary" onclick="window.print()">🖨 列印</button>
+      </div>
+      <div id="result-30" class="result-box"></div>
+    </div>
+  </div>
+
+  <!-- STOP-BANG -->
+  <div id="quiz-stopbang" class="tab-content">
+    <div class="quiz-container">
+      <div class="quiz-title">STOP-BANG 睡眠呼吸中止症快篩</div>
+      <div class="quiz-desc">每題「是」計1分。研究敏感度 91.23%。完成後建議將結果告知矯正醫師。<br>預計完成時間：約1分鐘</div>
+      <div id="stopbang-questions"></div>
+      <div class="quiz-actions">
+        <button class="btn btn-primary" onclick="calcStopbang()">📊 計算結果</button>
+        <button class="btn btn-secondary" onclick="resetStopbang()">🔄 重新填寫</button>
+      </div>
+      <div id="result-stopbang" class="result-box"></div>
+    </div>
+  </div>
+
+  <!-- TMD -->
+  <div id="quiz-tmd" class="tab-content">
+    <div class="quiz-container">
+      <div class="quiz-title">顳顎關節（TMJ）初步篩檢問卷</div>
+      <div class="quiz-desc">基於 DC/TMD 國際診斷標準設計。此問卷僅為初步篩檢，確診需由醫師進行臨床檢查。</div>
+      <div id="tmd-questions"></div>
+      <div class="quiz-actions">
+        <button class="btn btn-primary" onclick="calcTMD()">📊 查看結果</button>
+        <button class="btn btn-secondary" onclick="resetTMD()">🔄 重新填寫</button>
+      </div>
+      <div id="result-tmd" class="result-box"></div>
+    </div>
+  </div>
+
+  <!-- Consent -->
+  <div id="quiz-consent" class="tab-content">
+    <div class="quiz-container">
+      <div class="quiz-title">矯正治療知情同意確認清單</div>
+      <div class="quiz-desc">簽署同意書前，請逐項確認已獲得以下資訊。勾選所有已確認項目。</div>
+      <ul class="checklist" id="consent-list"></ul>
+      <div class="quiz-actions">
+        <button class="btn btn-primary" onclick="calcConsent()">📊 查看結果</button>
+        <button class="btn btn-secondary" onclick="resetConsent()">🔄 重新填寫</button>
+        <button class="btn btn-secondary" onclick="window.print()">🖨 列印清單</button>
+      </div>
+      <div id="result-consent" class="result-box"></div>
+    </div>
+  </div>
+
+  <!-- Tracking -->
+  <div id="quiz-tracking" class="tab-content">
+    <div class="quiz-container">
+      <div class="quiz-title">治療中追蹤問卷（每6個月自評）</div>
+      <div class="quiz-desc">在治療過程中定期監測是否出現值得注意的新症狀。回診前填寫，攜帶至診所與醫師討論。</div>
+      <div id="tracking-questions"></div>
+      <div class="quiz-actions">
+        <button class="btn btn-primary" onclick="calcTracking()">📊 查看建議</button>
+        <button class="btn btn-secondary" onclick="resetTracking()">🔄 重新填寫</button>
+        <button class="btn btn-secondary" onclick="window.print()">🖨 列印帶去回診</button>
+      </div>
+      <div id="result-tracking" class="result-box"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== DOCTOR CHECK ========== -->
+<div id="section-doctor-check" class="section">
+  <h2 class="section-title">🔍 矯正醫師安全知識驗證工具</h2>
+  <div class="info-box">💡 本工具目的是促進醫患溝通。良好的醫師通常歡迎這些問題，並能清晰說明。</div>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('doctor','doc-quick',this)">⚡ 5分鐘快速評估</button>
+    <button class="tab-btn" onclick="switchTab('doctor','doc-deep',this)">🔬 深度評估問題集</button>
+    <button class="tab-btn" onclick="switchTab('doctor','doc-fee',this)">💰 費用透明度</button>
+  </div>
+
+  <div id="doc-quick" class="tab-content active">
+    <div class="quiz-container">
+      <div class="quiz-title">5分鐘快速醫師評估</div>
+      <div class="quiz-desc">在初診諮詢時問醫師以下5個問題，根據回應給予評分（0–4分）。</div>
+      <div id="doctor-quick-questions"></div>
+      <div class="quiz-actions">
+        <button class="btn btn-primary" onclick="calcDoctorQuick()">📊 計算總分</button>
+        <button class="btn btn-secondary" onclick="resetDoctorQuick()">🔄 重新評分</button>
+      </div>
+      <div id="result-doctor-quick" class="result-box"></div>
+    </div>
+  </div>
+
+  <div id="doc-deep" class="tab-content">
+    <div class="quiz-container">
+      <div class="quiz-title">深度評估問題集</div>
+      <div class="quiz-desc">適合有特定健康問題或希望全面了解醫師能力的患者。</div>
+      <div id="doc-deep-content"></div>
+    </div>
+  </div>
+
+  <div id="doc-fee" class="tab-content">
+    <div class="quiz-container">
+      <div class="quiz-title">費用透明度確認清單</div>
+      <div class="quiz-desc">請診所提供書面費用明細，逐項確認。</div>
+      <ul class="checklist" id="fee-list"></ul>
+      <div class="quiz-actions">
+        <button class="btn btn-primary" onclick="calcFee()">📊 查看結果</button>
+        <button class="btn btn-secondary" onclick="resetFee()">🔄 重新填寫</button>
+      </div>
+      <div id="result-fee" class="result-box"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== LEGAL ========== -->
+<div id="section-legal" class="section">
+  <h2 class="section-title">⚖️ 矯正治療安全評估的法律責任分析</h2>
+  <div class="warn-box">⚠️ 本文件僅供教育參考，不構成法律意見。具體法律問題請諮詢執業律師。</div>
+
+  <a href="legal-analysis.pdf" download class="btn btn-primary" style="margin-bottom:24px;display:inline-flex;">⬇ 下載完整法律分析 PDF</a>
+
+  <div class="accordion">
+    <div class="accordion-header" onclick="toggleAccordion(this)">▶ 一、台灣醫療責任的法律框架<span class="accordion-arrow">▼</span></div>
+    <div class="accordion-body">
+      <table>
+        <tr><th>法律</th><th>主要適用情境</th><th>責任類型</th></tr>
+        <tr><td><strong>民法</strong></td><td>損害賠償請求</td><td>民事責任（財產損害、精神慰撫金）</td></tr>
+        <tr><td><strong>刑法</strong></td><td>業務過失傷害/致死</td><td>刑事責任</td></tr>
+        <tr><td><strong>醫療法</strong></td><td>醫療機構管理規範</td><td>行政責任</td></tr>
+        <tr><td><strong>醫師法</strong></td><td>醫師執業規範</td><td>行政責任（廢照、停業）</td></tr>
+        <tr><td><strong>消費者保護法</strong></td><td>醫療服務瑕疵</td><td>民事責任（適用有爭議）</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header" onclick="toggleAccordion(this)">▶ 二、哪些情形可能構成醫療疏失？<span class="accordion-arrow">▼</span></div>
+    <div class="accordion-body">
+      <p><strong>醫療疏失四要件（須同時成立）：</strong></p>
+      <ol style="margin:10px 0 0 20px;">
+        <li><strong>注意義務</strong>：醫師對患者負有合理注意之義務</li>
+        <li><strong>違反注意義務</strong>：行為未達當時醫療水準應有之標準</li>
+        <li><strong>因果關係</strong>：違反義務的行為與患者損害有相當因果關係</li>
+        <li><strong>損害</strong>：患者確實發生可量化之損害</li>
+      </ol>
+      <br>
+      <table>
+        <tr><th>評估項目省略</th><th>是否可能構成疏失</th></tr>
+        <tr><td>TMJ 評估（有既有症狀而未評估）</td><td>✅ 可能構成疏失</td></tr>
+        <tr><td>牙周評估（活動性牙周病未轉介）</td><td>✅ 可能性高</td></tr>
+        <tr><td>知情同意不足</td><td>✅ 可能構成疏失</td></tr>
+        <tr><td>呼吸道評估（有高風險因素未評估）</td><td>⚠️ 視個案，風險較高</td></tr>
+        <tr><td>追蹤X光（超過2年未照）</td><td>⚠️ 有所爭議</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header" onclick="toggleAccordion(this)">▶ 三、醫療疏失 vs 違反醫療法：概念區別<span class="accordion-arrow">▼</span></div>
+    <div class="accordion-body">
+      <table>
+        <tr><th></th><th>醫療疏失（民事/刑事）</th><th>違反醫療法（行政）</th></tr>
+        <tr><td>性質</td><td>個案損害賠償或刑事追訴</td><td>對醫療機構/醫師的行政處罰</td></tr>
+        <tr><td>認定標準</td><td>偏離醫療水準並造成損害</td><td>違反醫療法條文規定</td></tr>
+        <tr><td>處理機關</td><td>法院</td><td>衛生局/衛福部</td></tr>
+        <tr><td>結果</td><td>賠償、有罪判決</td><td>罰款、停業、廢照</td></tr>
+        <tr><td>是否需要損害</td><td>需有損害結果</td><td>程序違規即可處罰</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header" onclick="toggleAccordion(this)">▶ 四、消滅時效：請務必注意！<span class="accordion-arrow">▼</span></div>
+    <div class="accordion-body">
+      <div class="danger-box">
+        🚨 <strong>民法第197條</strong>：侵權行為損害賠償請求權，自知有損害及賠償義務人時起 <strong>2年內</strong> 請求，或自侵權行為時起 <strong>10年</strong> 消滅。<br><br>
+        一旦懷疑有醫療損害，<strong>請立即諮詢法律意見</strong>，避免時效消滅。
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header" onclick="toggleAccordion(this)">▶ 五、重要證據保全清單<span class="accordion-arrow">▼</span></div>
+    <div class="accordion-body">
+      <table>
+        <tr><th>證據類型</th><th>取得方式</th><th>重要性</th></tr>
+        <tr><td>病歷（含X光片）</td><td>依醫療法第70條申請複製本</td><td>★★★★★</td></tr>
+        <tr><td>知情同意書</td><td>簽署時索取副本</td><td>★★★★★</td></tr>
+        <tr><td>治療前後照片</td><td>向診所索取或自行保存</td><td>★★★★</td></tr>
+        <tr><td>通訊記錄</td><td>LINE、Email 截圖保存</td><td>★★★★</td></tr>
+        <tr><td>症狀日記</td><td>記錄症狀出現時間與嚴重程度</td><td>★★★</td></tr>
+        <tr><td>診療費用收據</td><td>每次治療費用明細</td><td>★★★</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header" onclick="toggleAccordion(this)">▶ 六、法律責任綜合分析表<span class="accordion-arrow">▼</span></div>
+    <div class="accordion-body">
+      <table>
+        <tr><th>行為態樣</th><th>民事疏失</th><th>違反醫療法</th><th>刑事責任</th></tr>
+        <tr><td>未進行知情同意說明</td><td>可能成立</td><td>可能（第81條）</td><td>通常不成立</td></tr>
+        <tr><td>廣告宣稱保證療效</td><td>可能影響信賴損害</td><td>可能成立</td><td>通常不成立</td></tr>
+        <tr><td>非牙醫師執行矯正</td><td>可能成立</td><td>明確違反醫師法</td><td>可能（密醫罪）</td></tr>
+        <tr><td>已有TMD未告知仍執行</td><td>可能成立</td><td>可能（第81條）</td><td>通常不成立</td></tr>
+        <tr><td>正顎手術操作不當致永久損害</td><td>可能成立</td><td>可能</td><td>視個案可能成立</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- ========== COMPLAINT ========== -->
+<div id="section-complaint" class="section">
+  <h2 class="section-title">📞 申訴指南與自我保護</h2>
+  <a href="complaint-guide.pdf" download class="btn btn-primary" style="margin-bottom:24px;display:inline-flex;">⬇ 下載完整申訴指南 PDF</a>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('complaint-t','ct-before',this)">🛡️ 治療前預防</button>
+    <button class="tab-btn" onclick="switchTab('complaint-t','ct-during',this)">📅 治療中監控</button>
+    <button class="tab-btn" onclick="switchTab('complaint-t','ct-after',this)">🚨 發生糾紛後</button>
+    <button class="tab-btn" onclick="switchTab('complaint-t','ct-contacts',this)">📋 申訴管道</button>
+  </div>
+
+  <div id="ct-before" class="tab-content active">
+    <div class="quiz-container">
+      <h3 style="color:var(--primary);margin-bottom:14px;">治療前的預防措施</h3>
+      <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion(this)">▶ 如何確認醫師資格<span class="accordion-arrow">▼</span></div>
+        <div class="accordion-body">
+          <p><strong>衛生福利部醫事查詢系統</strong>（搜尋「全國醫事機構查詢」）</p>
+          <p>可查詢：牙醫師執照號碼、執業地點、是否具齒顎矯正專科</p>
+          <br>
+          <p><strong>台灣齒顎矯正學會</strong>（www.orthodontics.org.tw）</p>
+          <p>可查詢：是否為台灣齒顎矯正學會認定之專科醫師</p>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion(this)">▶ 初診20個必問問題<span class="accordion-arrow">▼</span></div>
+        <div class="accordion-body">
+          <ol style="margin:0 0 0 20px;line-height:2.2;font-size:14px;">
+            <li>您持有牙醫師執照字號為何？</li>
+            <li>您是否接受過齒顎矯正專科訓練？</li>
+            <li>您每年執行約幾件矯正案例？</li>
+            <li>我的主要問題診斷是什麼？</li>
+            <li>建議的治療方案為何？有其他選擇嗎？</li>
+            <li>治療需要多久？（請給估計範圍）</li>
+            <li>是否需要拔牙？根據是什麼？</li>
+            <li>您如何評估我的顳顎關節狀況？</li>
+            <li>您如何評估我的呼吸道狀況？</li>
+            <li>是否有正顎手術的需要？</li>
+            <li>這個治療對我最主要的風險是什麼？</li>
+            <li>我的牙根吸收風險如何評估？</li>
+            <li>如果發生 TMD，您的處理方式是什麼？</li>
+            <li>完成後復發可能性有多高？</li>
+            <li>需要什麼維持器？多久？</li>
+            <li>維持器費用是否包含在總費用中？</li>
+            <li>維持器損壞或遺失費用？</li>
+            <li>總費用明細如何？分次付款方式？</li>
+            <li>中途停止治療的退費機制為何？</li>
+            <li>您能提供書面治療計劃及費用說明書嗎？</li>
+          </ol>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion(this)">▶ 廣告紅旗警示<span class="accordion-arrow">▼</span></div>
+        <div class="accordion-body">
+          <div class="danger-box">
+            以下診所廣告若出現，應特別謹慎：<br>
+            ❌「保證不需拔牙」<br>
+            ❌「保證3個月完成」<br>
+            ❌「矯正不影響TMJ」<br>
+            ❌「百分之百不復發」<br>
+            ❌「台灣最厲害的技術」（無法查證的宣稱）
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="ct-during" class="tab-content">
+    <div class="quiz-container">
+      <h3 style="color:var(--primary);margin-bottom:14px;">治療中的自我保護</h3>
+      <div class="info-box">
+        <strong>必須建立的「矯正治療文件夾」</strong>：每次收費收據、知情同意書副本、治療計劃書、每月自拍照片、與診所的通訊截圖。
+      </div>
+      <br>
+      <h4 style="margin-bottom:10px;">警示訊號</h4>
+      <div class="danger-box" style="margin-bottom:10px;">
+        🔴 <strong>立即回診</strong>：器材脫落/斷裂、突然不對稱臉部腫脹、牙齒劇烈疼痛超過一週
+      </div>
+      <div class="warn-box" style="margin-bottom:10px;">
+        🟡 <strong>應主動詢問醫師</strong>：治療時間超出估計超過6個月、新出現TMJ不適、咬合感覺改變
+      </div>
+      <div class="info-box">
+        🟠 <strong>應尋求第二意見</strong>：醫師無法說明延誤原因、被要求追加費用無明細、出現明顯牙根縮短（需X光確認）
+      </div>
+    </div>
+  </div>
+
+  <div id="ct-after" class="tab-content">
+    <div class="quiz-container">
+      <h3 style="color:var(--primary);margin-bottom:14px;">發生糾紛後的步驟</h3>
+      <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion(this)">▶ Step 1：申請病歷（最重要！）<span class="accordion-arrow">▼</span></div>
+        <div class="accordion-body">
+          <div class="info-box">依據醫療法第70條，患者有權申請病歷複製本。向診所提出書面申請（保留申請記錄），診所應在合理時間內（通常7–14工作天）提供。診所不得無故拒絕。</div>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion(this)">▶ Step 2：整理事實時間軸<span class="accordion-arrow">▼</span></div>
+        <div class="accordion-body">
+          <p>製作一份「事件時間軸」，以日期為序記錄：治療開始日期、問題出現日期、與診所溝通記錄、目前的損害狀況。</p>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion(this)">▶ Step 3：先書面與診所溝通<span class="accordion-arrow">▼</span></div>
+        <div class="accordion-body">
+          <p>在正式申訴前，先以 Email 或 LINE 文字記錄向診所提出訴求。這步驟提供診所改正機會，同時產生書面通訊記錄。</p>
+        </div>
+      </div>
+      <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion(this)">▶ Step 4：選擇申訴管道<span class="accordion-arrow">▼</span></div>
+        <div class="accordion-body">
+          <p>詳見「申訴管道」頁籤，包含衛生局、醫療調解、消費者保護、法律援助等多種途徑。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="ct-contacts" class="tab-content">
+    <div class="quiz-container">
+      <h3 style="color:var(--primary);margin-bottom:14px;">台灣主要申訴管道</h3>
+
+      <h4 style="margin:16px 0 10px;">各縣市衛生局</h4>
+      <table class="contact-table">
+        <tr><th>縣市</th><th>電話</th><th>說明</th></tr>
+        <tr><td>台北市</td><td>02-2375-3782</td><td>台北市政府衛生局</td></tr>
+        <tr><td>新北市</td><td>02-2258-6500</td><td>新北市政府衛生局</td></tr>
+        <tr><td>桃園市</td><td>03-332-5106</td><td>桃園市政府衛生局</td></tr>
+        <tr><td>台中市</td><td>04-2515-2888</td><td>台中市政府衛生局</td></tr>
+        <tr><td>台南市</td><td>06-635-0501</td><td>台南市政府衛生局</td></tr>
+        <tr><td>高雄市</td><td>07-322-0755</td><td>高雄市政府衛生局</td></tr>
+      </table>
+
+      <h4 style="margin:20px 0 10px;">其他重要管道</h4>
+      <table class="contact-table">
+        <tr><th>機構</th><th>聯絡</th><th>適用情境</th></tr>
+        <tr><td>衛福部醫療糾紛關懷服務</td><td>0800-030-598（免費）</td><td>醫療糾紛諮詢、轉介</td></tr>
+        <tr><td>消費者服務專線</td><td>1950</td><td>廣告不實、合約退費糾紛</td></tr>
+        <tr><td>消費者文教基金會</td><td>02-2700-1234</td><td>消費申訴、法律諮詢</td></tr>
+        <tr><td>法律扶助基金會</td><td>412-8518（市話加02）</td><td>免費/低費用法律諮詢</td></tr>
+      </table>
+
+      <div class="info-box" style="margin-top:16px;">
+        <strong>申訴流程</strong>：① 準備文件 → ② 填寫申訴書 → ③ 提交衛生局 → ④ 等待受理通知（7–14工作天）→ ⑤ 配合調查/調解 → ⑥ 若未解決，考慮民事訴訟
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== DOWNLOADS ========== -->
+<div id="section-downloads" class="section">
+  <h2 class="section-title">📄 下載資源中心</h2>
+  <p style="margin-bottom:20px;color:var(--text-light);">所有文件均為 PDF 格式，可免費下載列印。建議攜帶至矯正初診諮詢。</p>
+
+  <h3 style="color:var(--primary);margin-bottom:14px;">📖 安全自評報告</h3>
+  <div class="download-grid">
+    <div class="download-card">
+      <h4>📗 矯正安全指南 入門版</h4>
+      <p>適合高中程度、首次了解矯正評估的患者。約5分鐘閱讀。</p>
+      <div class="download-meta">包含：30題問卷 | 風險說明 | 就診前準備</div>
+      <a href="report-beginner.pdf" download class="btn btn-primary">⬇ 下載 PDF</a>
+    </div>
+    <div class="download-card">
+      <h4>📘 矯正安全指南 進階版</h4>
+      <p>包含臨床數據與研究支持，適合一般成人。約10分鐘閱讀。</p>
+      <div class="download-meta">包含：STOP-BANG數據 | 風險發生率 | 30題問卷</div>
+      <a href="report-advanced.pdf" download class="btn btn-primary">⬇ 下載 PDF</a>
+    </div>
+    <div class="download-card">
+      <h4>📕 矯正安全指南 專業版</h4>
+      <p>完整OR/CI值、DC/TMD標準、SciSpace文獻回顧。約20分鐘閱讀。</p>
+      <div class="download-meta">包含：456篇文獻摘要 | 決策樹 | 六階段評估協議</div>
+      <a href="report-expert.pdf" download class="btn btn-primary">⬇ 下載 PDF</a>
+    </div>
+  </div>
+
+  <h3 style="color:var(--primary);margin:24px 0 14px;">⚖️ 法律與保護資源</h3>
+  <div class="download-grid">
+    <div class="download-card">
+      <h4>⚖️ 醫療法律責任分析</h4>
+      <p>客觀分析矯正安全評估不足在台灣法律框架下的責任認定。</p>
+      <div class="download-meta">包含：民法、醫療法、刑法分析 | 疏失認定要件</div>
+      <a href="legal-analysis.pdf" download class="btn btn-secondary">⬇ 下載 PDF</a>
+    </div>
+    <div class="download-card">
+      <h4>📞 患者申訴完整指南</h4>
+      <p>從治療前預防到糾紛申訴的完整步驟，含各縣市衛生局聯絡方式。</p>
+      <div class="download-meta">包含：20個初診問題 | 申訴步驟 | 衛生局聯絡資訊</div>
+      <a href="complaint-guide.pdf" download class="btn btn-secondary">⬇ 下載 PDF</a>
+    </div>
+  </div>
+
+  <br>
+  <div class="info-box">
+    <strong>使用建議</strong>：建議下載「入門版」或「進階版」，以及「申訴完整指南」，共同攜帶至矯正初診諮詢。初診時可直接對照問卷，請醫師針對您個人情況說明。
+  </div>
+</div>
+
+<footer>
+  <strong>矯正治療前安全自評指南</strong><br>
+  氧樂多牙醫診所 ｜ 趙哲暘醫師<br>
+  <br>
+  本網站純為教育用途，不構成醫療或法律建議。<br>
+  內容基於 2018–2024 年國際學術研究，更新日期：2026-04-01<br>
+  <br>
+  © 2026 氧樂多牙醫診所｜趙哲暘醫師
+</footer>
+
+<script>
+// ===== NAVIGATION =====
+function showSection(name) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  document.getElementById('section-' + name).classList.add('active');
+  const nav = document.getElementById('nav-' + name);
+  if (nav) nav.classList.add('active');
+  document.getElementById('navLinks').classList.remove('open');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function toggleMenu() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+
+// ===== TABS =====
+function switchTab(group, tabId, btn) {
+  const container = btn.closest('.section') || document;
+  container.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  container.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(tabId).classList.add('active');
+}
+
+// ===== ACCORDION =====
+function toggleAccordion(header) {
+  const body = header.nextElementSibling;
+  header.classList.toggle('open');
+  body.classList.toggle('open');
+}
+
+// ===== Q30 =====
+const q30Data = [
+  {section:'A類：呼吸道與睡眠（6題）', questions:[
+    '夜間打呼（本人或旁人觀察）',
+    '白天嗜睡、疲勞、注意力不集中',
+    '慢性鼻塞、習慣性口呼吸',
+    '睡眠中呼吸暫停（旁人觀察）',
+    '扁桃腺肥大或咽喉擁擠感',
+    '頸圍偏大（男性≥43cm，女性≥38cm）'
+  ]},
+  {section:'B類：顳顎關節（6題）', questions:[
+    '開閉口時關節彈響（喀喀聲）',
+    '開口受限或下巴卡住',
+    '顳部頭痛或耳前疼痛',
+    '磨牙症（睡眠磨牙或清醒緊咬）',
+    '牙齒咬合面異常磨耗',
+    '既往 TMD 診斷或治療史'
+  ]},
+  {section:'C類：下顎位置（3題）', questions:[
+    '咬合時下巴偏向一側',
+    '明顯臉部非對稱',
+    '下巴尖偏移'
+  ]},
+  {section:'D類：牙齒健康史（5題）', questions:[
+    '根管治療（死髓牙）史',
+    '牙齒外傷史',
+    '家族矯正併發症史（如牙根吸收）',
+    '牙齦萎縮或牙根外露',
+    '活動性牙周病或牙齦炎'
+  ]},
+  {section:'E類：矯正史（3題）', questions:[
+    '曾矯正但復發',
+    '埋伏齒（未萌出恆齒）',
+    '先天缺牙（除智齒外）'
+  ]},
+  {section:'F類：全身病史與藥物（3題）', questions:[
+    '使用影響骨代謝藥物（雙磷酸鹽、類固醇）',
+    '內分泌疾病（糖尿病、甲狀腺疾病）',
+    '顏面外傷或顎骨手術史'
+  ]},
+  {section:'G類：配合度與生活習慣（3題）', questions:[
+    '願意長期（可能終身）配戴維持器',
+    '能維持良好口腔衛生',
+    '從事接觸性運動（需防護牙套）'
+  ]},
+  {section:'H類：知情同意（1題）', questions:[
+    '醫師是否提供針對本人個別風險的書面說明？'
+  ]}
+];
+
+function buildQ30() {
+  const container = document.getElementById('q30-questions');
+  container.innerHTML = '';
+  let qNum = 0;
+  q30Data.forEach(group => {
+    const label = document.createElement('div');
+    label.className = 'quiz-section-label';
+    label.textContent = group.section;
+    container.appendChild(label);
+    group.questions.forEach(q => {
+      qNum++;
+      const div = document.createElement('div');
+      div.className = 'question';
+      div.innerHTML = `<p>${qNum}. ${q}</p>
+        <div class="options">
+          <button class="option-btn" onclick="selectQ30(${qNum},'是',this)">是</button>
+          <button class="option-btn" onclick="selectQ30(${qNum},'否',this)">否</button>
+          <button class="option-btn" onclick="selectQ30(${qNum},'不確定',this)">不確定</button>
+        </div>`;
+      container.appendChild(div);
+    });
+  });
+}
+
+let q30Answers = {};
+function selectQ30(n, val, btn) {
+  q30Answers[n] = val;
+  btn.closest('.options').querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected','selected-yes'));
+  btn.classList.add(val === '是' ? 'selected-yes' : 'selected');
+}
+
+function calc30() {
+  let score = Object.values(q30Answers).filter(v => v === '是').length;
+  const res = document.getElementById('result-30');
+  res.style.display = 'block';
+  let cls, msg, advice;
+  if (score <= 5) {
+    cls = 'low'; msg = '低風險';
+    advice = '您目前沒有明顯的高風險因素。仍建議在初診時讓醫師完整評估，並確認知情同意書涵蓋個人風險說明。';
+  } else if (score <= 12) {
+    cls = 'mid'; msg = '中風險';
+    advice = '您有若干需要注意的風險因素。建議將「是」的項目整理成清單帶去初診，主動詢問醫師針對這些因素的評估計劃。';
+  } else {
+    cls = 'high'; msg = '高風險';
+    advice = '您有多個高風險因素，矯正前應進行完整的安全評估。建議先尋求有矯正專科訓練的醫師，並在治療前處理已知的 TMJ 或牙周問題。';
+  }
+  res.className = `result-box ${cls}`;
+  res.innerHTML = `<h3>📊 評估結果：${msg}</h3>
+    <span class="result-score">${score} / 30</span>
+    <div class="progress-bar"><div class="progress-fill" style="width:${(score/30)*100}%"></div></div>
+    <p style="margin-top:12px;">${advice}</p>
+    <p style="margin-top:8px;font-size:13px;color:var(--text-light);">注意：此問卷不能取代專業醫師的臨床評估，僅供初步自我了解。</p>`;
+}
+
+function reset30() {
+  q30Answers = {};
+  buildQ30();
+  document.getElementById('result-30').style.display = 'none';
+}
+
+// ===== STOP-BANG =====
+const stopbangData = [
+  {id:'S', label:'S — 打鼾（Snoring）', q:'您打鼾聲很大嗎？（大到隔著關上的門都能聽到，或旁人被吵到）'},
+  {id:'T', label:'T — 疲勞（Tired）', q:'您白天常常感到疲勞、勞累或昏昏欲睡嗎？'},
+  {id:'O', label:'O — 觀察（Observed）', q:'有人觀察到您在睡眠中停止呼吸嗎？'},
+  {id:'P', label:'P — 高血壓（Pressure）', q:'您有高血壓，或正在接受高血壓治療嗎？'},
+  {id:'B', label:'B — BMI', q:'您的 BMI 是否大於 35？'},
+  {id:'A', label:'A — 年齡（Age）', q:'您是否年齡超過 50 歲？'},
+  {id:'N', label:'N — 頸圍（Neck）', q:'您的頸圍是否大於 40 公分？'},
+  {id:'G', label:'G — 性別（Gender）', q:'您的生理性別是男性嗎？'}
+];
+
+function buildStopbang() {
+  const c = document.getElementById('stopbang-questions');
+  c.innerHTML = stopbangData.map((item,i) => `
+    <div class="question">
+      <p><strong>${item.label}</strong><br>${item.q}</p>
+      <div class="options">
+        <button class="option-btn" onclick="selectSB(${i},'是',this)">是</button>
+        <button class="option-btn" onclick="selectSB(${i},'否',this)">否</button>
+      </div>
+    </div>`).join('');
+}
+
+let sbAnswers = {};
+function selectSB(n, val, btn) {
+  sbAnswers[n] = val;
+  btn.closest('.options').querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected','selected-yes'));
+  btn.classList.add(val === '是' ? 'selected-yes' : 'selected');
+}
+
+function calcStopbang() {
+  const score = Object.values(sbAnswers).filter(v => v === '是').length;
+  const res = document.getElementById('result-stopbang');
+  res.style.display = 'block';
+  let cls, msg, advice;
+  if (score <= 2) {
+    cls = 'low'; msg = 'OSA 低風險';
+    advice = '您的睡眠呼吸中止症風險較低。仍建議告知矯正醫師您的睡眠狀況。';
+  } else if (score <= 4) {
+    cls = 'mid'; msg = 'OSA 中風險';
+    advice = '建議進行正式睡眠評估（可轉介至耳鼻喉科或睡眠醫學門診），矯正計劃應納入呼吸道考量。';
+  } else {
+    cls = 'high'; msg = 'OSA 高風險';
+    advice = '強烈建議先進行正式睡眠多項生理檢查（PSG），確認是否有睡眠呼吸中止症後，再制定矯正計劃。矯正醫師應具備呼吸道評估能力。';
+  }
+  res.className = `result-box ${cls}`;
+  res.innerHTML = `<h3>😴 結果：${msg}</h3>
+    <span class="result-score">${score} / 8</span>
+    <div class="progress-bar"><div class="progress-fill" style="width:${(score/8)*100}%"></div></div>
+    <p style="margin-top:12px;">${advice}</p>`;
+}
+
+function resetStopbang() {
+  sbAnswers = {};
+  buildStopbang();
+  document.getElementById('result-stopbang').style.display = 'none';
+}
+
+// ===== TMD =====
+const tmdData = [
+  {q:'過去30天內，您是否有下顎部位、太陽穴、耳朵、或耳朵前方的疼痛？', key:'pain1'},
+  {q:'疼痛在張口、閉口、或咀嚼時是否加重？', key:'pain2'},
+  {q:'您的下巴關節在開口或閉口時是否有聲響（喀喀聲或摩擦音）？幾乎每次？', key:'click1'},
+  {q:'過去30天內，您是否有開口受限（張不大）的情況？', key:'limit1'},
+  {q:'您的下巴是否曾「卡住」，導致無法完全張開或閉合？', key:'lock1'},
+  {q:'正常開口時，下巴是否偏向某側（不走直線）？', key:'deviate1'}
+];
+
+function buildTMD() {
+  const c = document.getElementById('tmd-questions');
+  c.innerHTML = tmdData.map((item,i) => `
+    <div class="question">
+      <p>${i+1}. ${item.q}</p>
+      <div class="options">
+        <button class="option-btn" onclick="selectTMD(${i},'是',this)">是</button>
+        <button class="option-btn" onclick="selectTMD(${i},'否',this)">否</button>
+      </div>
+    </div>`).join('');
+}
+
+let tmdAnswers = {};
+function selectTMD(n, val, btn) {
+  tmdAnswers[n] = val;
+  btn.closest('.options').querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected','selected-yes'));
+  btn.classList.add(val === '是' ? 'selected-yes' : 'selected');
+}
+
+function calcTMD() {
+  const yes = Object.values(tmdAnswers).filter(v => v === '是').length;
+  const res = document.getElementById('result-tmd');
+  res.style.display = 'block';
+  let cls, msg, advice;
+  if (yes === 0) {
+    cls = 'low'; msg = '無明顯TMD症狀';
+    advice = '目前無明顯顳顎關節症狀。矯正前仍應讓醫師進行基本 TMJ 臨床檢查。';
+  } else if (yes <= 2) {
+    cls = 'mid'; msg = '輕度疑似TMD症狀';
+    advice = '有若干 TMJ 相關症狀，建議矯正前進行完整的 DC/TMD 評估。告知矯正醫師這些症狀，請醫師說明如何在治療計劃中考量。';
+  } else {
+    cls = 'high'; msg = '明顯TMD症狀，需評估';
+    advice = '有多個 TMJ 症狀，強烈建議在開始矯正治療前先進行完整的顳顎關節評估，必要時先以保守治療（咬合板、物理治療）處理後再矯正。';
+  }
+  res.className = `result-box ${cls}`;
+  res.innerHTML = `<h3>🦷 結果：${msg}</h3>
+    <span class="result-score">${yes} 題陽性</span>
+    <p style="margin-top:12px;">${advice}</p>
+    <p style="margin-top:8px;font-size:13px;">此問卷僅為初步篩檢，確診需由醫師進行臨床檢查（觸診、開口度測量等）。</p>`;
+}
+
+function resetTMD() {
+  tmdAnswers = {};
+  buildTMD();
+  document.getElementById('result-tmd').style.display = 'none';
+}
+
+// ===== CONSENT =====
+const consentItems = [
+  '醫師說明了我的主要診斷（骨骼問題、齒列問題或兩者）',
+  '醫師說明了建議的治療方式（傳統固定/隱形矯正/正顎手術等）',
+  '醫師告知了預估治療時間（範圍）',
+  '醫師說明是否需要拔牙及拔牙的理由',
+  '醫師評估並說明了牙根外吸收（EARR）的個人風險',
+  '醫師評估並說明了顳顎關節（TMJ）相關風險',
+  '醫師評估並說明了呼吸道相關考量',
+  '醫師說明了治療後復發的可能性',
+  '醫師說明了維持器的種類、配戴時間及費用',
+  '醫師說明了替代治療方案',
+  '醫師說明了不治療的後果',
+  '我收到書面的費用明細',
+  '我了解中途退費的政策',
+  '同意書有具體的風險說明（不只是一般聲明）'
+];
+
+function buildConsent() {
+  const ul = document.getElementById('consent-list');
+  ul.innerHTML = consentItems.map((item, i) => `
+    <li>
+      <div class="check-box" id="cb-${i}" onclick="toggleCheck(${i})"></div>
+      <div class="check-label">${item}</div>
+    </li>`).join('');
+}
+
+function toggleCheck(i) {
+  const cb = document.getElementById('cb-' + i);
+  cb.classList.toggle('checked');
+  cb.textContent = cb.classList.contains('checked') ? '✓' : '';
+}
+
+function calcConsent() {
+  const checked = document.querySelectorAll('#consent-list .check-box.checked').length;
+  const res = document.getElementById('result-consent');
+  res.style.display = 'block';
+  let cls, msg, advice;
+  if (checked >= 13) {
+    cls = 'low'; msg = '知情同意完整';
+    advice = '您的知情同意資訊相當完整，可安心繼續治療程序。';
+  } else if (checked >= 9) {
+    cls = 'mid'; msg = '部分確認，建議補充';
+    advice = '建議回到診所要求補充說明未確認的項目，再簽署同意書。';
+  } else {
+    cls = 'high'; msg = '知情同意不足';
+    advice = '您尚未獲得足夠的治療資訊。強烈建議延遲簽署，要求醫師補充說明，或尋求第二意見。';
+  }
+  res.className = `result-box ${cls}`;
+  res.innerHTML = `<h3>📝 結果：${msg}</h3>
+    <span class="result-score">${checked} / 14</span>
+    <div class="progress-bar"><div class="progress-fill" style="width:${(checked/14)*100}%"></div></div>
+    <p style="margin-top:12px;">${advice}</p>`;
+}
+
+function resetConsent() {
+  document.querySelectorAll('#consent-list .check-box').forEach(cb => {
+    cb.classList.remove('checked');
+    cb.textContent = '';
+  });
+  document.getElementById('result-consent').style.display = 'none';
+}
+
+// ===== TRACKING =====
+const trackingData = [
+  '過去6個月內，您的下巴關節是否出現新的不適症狀？',
+  '您的咬合感覺是否有改變？（某顆牙特別接觸或原本可咬到的地方現在咬不到）',
+  '您有感覺口呼吸或打呼比治療前增加嗎？',
+  '您的頭頸部疼痛是否在治療後加重或新出現？',
+  '您是否感覺牙齒有明顯縮短或變短（可能需X光確認）？',
+  '醫師在過去6個月內，是否說明了目前治療進度是否在計劃內？',
+  '您距離上次照追蹤X光是否已超過18個月？'
+];
+
+function buildTracking() {
+  const c = document.getElementById('tracking-questions');
+  c.innerHTML = trackingData.map((q,i) => `
+    <div class="question">
+      <p>${i+1}. ${q}</p>
+      <div class="options">
+        <button class="option-btn" onclick="selectTracking(${i},'是',this)">是</button>
+        <button class="option-btn" onclick="selectTracking(${i},'否',this)">否</button>
+        <button class="option-btn" onclick="selectTracking(${i},'不確定',this)">不確定</button>
+      </div>
+    </div>`).join('');
+}
+
+let trackingAnswers = {};
+function selectTracking(n, val, btn) {
+  trackingAnswers[n] = val;
+  btn.closest('.options').querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected','selected-yes'));
+  btn.classList.add(val === '是' ? 'selected-yes' : 'selected');
+}
+
+function calcTracking() {
+  const res = document.getElementById('result-tracking');
+  res.style.display = 'block';
+  const flags = [];
+  if (trackingAnswers[0] === '是') flags.push('新出現TMJ不適——請主動告知醫師');
+  if (trackingAnswers[1] === '是') flags.push('咬合感覺改變——請主動告知醫師並要求評估');
+  if (trackingAnswers[2] === '是') flags.push('呼吸/打呼加重——可能需要睡眠評估');
+  if (trackingAnswers[3] === '是') flags.push('頭頸疼痛加重——請告知醫師，可能需要TMJ評估');
+  if (trackingAnswers[4] === '是') flags.push('牙齒感覺縮短——請要求安排追蹤X光');
+  if (trackingAnswers[5] === '否') flags.push('醫師未說明進度——下次回診主動詢問');
+  if (trackingAnswers[6] === '是') flags.push('X光追蹤逾期——請要求安排追蹤X光');
+
+  const cls = flags.length === 0 ? 'low' : flags.length <= 2 ? 'mid' : 'high';
+  res.className = `result-box ${cls}`;
+  if (flags.length === 0) {
+    res.innerHTML = `<h3>✅ 治療進展良好</h3><p>目前沒有需要特別注意的警示。繼續保持良好的口腔衛生和回診習慣。</p>`;
+  } else {
+    res.innerHTML = `<h3>⚠️ 以下項目需要注意（${flags.length}項）</h3>
+      <ul style="margin:12px 0 0 20px;">${flags.map(f => `<li style="margin-bottom:6px;">${f}</li>`).join('')}</ul>
+      <p style="margin-top:12px;font-size:13px;">建議將此報告攜帶至下次回診，與醫師逐項討論。</p>`;
+  }
+}
+
+function resetTracking() {
+  trackingAnswers = {};
+  buildTracking();
+  document.getElementById('result-tracking').style.display = 'none';
+}
+
+// ===== DOCTOR QUICK =====
+const doctorQuickData = [
+  {question:'請問您在決定矯正計劃前，是否會評估患者的呼吸道和睡眠問題？',
+   options:['有，說明完整評估流程且提及STOP-BANG/睡眠篩檢工具','會詢問睡眠問題，但無具體工具','說矯正不需要管呼吸道，或未正面回答'],
+   scores:[4,2,0]},
+  {question:'您如何評估患者在矯正前是否有顳顎關節問題？',
+   options:['說明完整TMJ篩檢流程（問診+觸診+影像），提及必要時轉介','表示會詢問是否有TMJ症狀','說矯正不會影響TMJ，或未正面回答'],
+   scores:[4,2,0]},
+  {question:'矯正治療可能導致牙根縮短，我的風險如何？',
+   options:['說明高風險因素、告知個人評估結果及監測計劃','承認有此風險，但未說明個人評估','說沒問題或只是輕微不用管，無具體數據'],
+   scores:[4,2,0]},
+  {question:'矯正完成後復發的可能性有多高？維持器要戴多久？',
+   options:['說明復發機率，建議終身配戴維持器，提供具體計劃及費用','說需要戴維持器，但細節模糊','說幾年後可以停，或維持器費用不透明'],
+   scores:[4,2,0]},
+  {question:'您會提供我個人的書面風險說明嗎？',
+   options:['表示會提供個人化書面說明並說明內容','有一般性同意書但無個人化說明','無書面說明，或說不需要'],
+   scores:[4,2,0]}
+];
+
+function buildDoctorQuick() {
+  const c = document.getElementById('doctor-quick-questions');
+  c.innerHTML = doctorQuickData.map((item,i) => `
+    <div class="question">
+      <p><strong>問題 ${i+1}：</strong>${item.question}</p>
+      <div class="options" style="flex-direction:column;gap:8px;">
+        ${item.options.map((opt,j) => `
+          <button class="option-btn" style="text-align:left;border-radius:8px;padding:10px 14px;"
+            onclick="selectDQ(${i},${j},${item.scores[j]},this)">
+            ${['✅','⚠️','❌'][j]} ${opt}（${item.scores[j]}分）
+          </button>`).join('')}
+      </div>
+    </div>`).join('');
+}
+
+let dqAnswers = {};
+function selectDQ(qi, oi, score, btn) {
+  dqAnswers[qi] = score;
+  btn.closest('.options').querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected','selected-yes'));
+  btn.classList.add(score >= 3 ? 'selected' : score >= 1 ? 'selected' : 'selected-yes');
+  btn.style.borderColor = score >= 4 ? '#27ae60' : score >= 2 ? '#f39c12' : '#e74c3c';
+  btn.style.background = score >= 4 ? '#d5f5e3' : score >= 2 ? '#fef9e7' : '#fdedec';
+}
+
+function calcDoctorQuick() {
+  const total = Object.values(dqAnswers).reduce((a,b) => a+b, 0);
+  const res = document.getElementById('result-doctor-quick');
+  res.style.display = 'block';
+  let cls, msg, advice;
+  if (total >= 16) {
+    cls = 'low'; msg = '醫師安全意識良好';
+    advice = '這位醫師展現出良好的安全評估意識，可繼續進行深入諮詢。';
+  } else if (total >= 10) {
+    cls = 'mid'; msg = '基本意識，建議追問';
+    advice = '有基本的安全意識，但部分重要細節尚未清楚說明。建議針對得分較低的問題追問具體細節。';
+  } else {
+    cls = 'high'; msg = '安全意識不足';
+    advice = '醫師對安全評估的回應不夠完整。強烈建議尋求第二意見，比較不同醫師的諮詢品質。';
+  }
+  res.className = `result-box ${cls}`;
+  res.innerHTML = `<h3>🔍 評估結果：${msg}</h3>
+    <span class="result-score">${total} / 20</span>
+    <div class="progress-bar"><div class="progress-fill" style="width:${(total/20)*100}%"></div></div>
+    <p style="margin-top:12px;">${advice}</p>`;
+}
+
+function resetDoctorQuick() {
+  dqAnswers = {};
+  buildDoctorQuick();
+  document.getElementById('result-doctor-quick').style.display = 'none';
+}
+
+// Deep content
+function buildDeepContent() {
+  document.getElementById('doc-deep-content').innerHTML = `
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">▶ 類別A：研究知識與臨床指引<span class="accordion-arrow">▼</span></div>
+      <div class="accordion-body">
+        <div class="question">
+          <p><strong>問題 A1</strong>：「您在制定矯正計劃時，有參考最新的臨床指引嗎？如 AAO 或台灣齒顎矯正學會的建議？」</p>
+          <p>✅ 好的回答：能說出具體指引名稱，提及實證醫學決策</p>
+          <p>❌ 需注意：「我都靠自己的經驗」或無法說明指引內容</p>
+        </div>
+        <div class="question">
+          <p><strong>問題 A2</strong>：「拔牙矯正和不拔牙矯正在我的情況下各有什麼影響？」</p>
+          <p>✅ 好的回答：說明兩種方案利弊、對臉型側貌的分析、提及呼吸道研究結論</p>
+          <p>❌ 需注意：「拔牙不影響臉型」（過度簡化）或「一定要拔才能矯正」</p>
+        </div>
+        <div class="question">
+          <p><strong>問題 A3</strong>：「您使用什麼工具或方法評估顳顎關節？是否使用 DC/TMD 標準？」</p>
+          <p>✅ 好的回答：說明臨床評估流程，提及 DC/TMD 或類似標準，知道何時需要 MRI 或 CBCT</p>
+          <p>❌ 需注意：「我只是問問症狀」或「矯正跟TMJ沒關係」</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">▶ 類別B：個人治療計劃說明<span class="accordion-arrow">▼</span></div>
+      <div class="accordion-body">
+        <div class="question">
+          <p><strong>問題 B1</strong>：「基於我的X光分析，我的骨骼型是哪一類？（Class I/II/III）」</p>
+          <p>✅ 好的回答：用清楚語言說明骨骼型分類及對治療策略的影響</p>
+        </div>
+        <div class="question">
+          <p><strong>問題 B2</strong>：「我的治療計劃中，最可能的困難或風險點是哪裡？」</p>
+          <p>✅ 好的回答：針對個人情況說明具體風險，有應對計劃</p>
+          <p>❌ 需注意：「應該都沒問題」或「很簡單的矯正」</p>
+        </div>
+        <div class="question">
+          <p><strong>問題 B3</strong>：「若治療過程中我的 TMJ 症狀加重，您的處理流程是什麼？」</p>
+          <p>✅ 好的回答：說明監測方式、暫停矯正力量的條件、轉介流程</p>
+          <p>❌ 需注意：「不會加重的」或「那不是矯正造成的」</p>
+        </div>
+      </div>
+    </div>
+    <div class="accordion">
+      <div class="accordion-header" onclick="toggleAccordion(this)">▶ 類別C：系統管理能力<span class="accordion-arrow">▼</span></div>
+      <div class="accordion-body">
+        <div class="question">
+          <p><strong>問題 C1</strong>：「治療期間您會多久安排一次追蹤X光評估牙根狀況？」</p>
+          <p>✅ 好的回答：每12–18個月，或視高風險因素縮短的監測計劃</p>
+          <p>❌ 需注意：「不需要追蹤」或「只有開始和結束才照」</p>
+        </div>
+        <div class="question">
+          <p><strong>問題 C2</strong>：「每次回診時，是您親自操作還是助理操作？」</p>
+          <p>✅ 好的回答：誠實說明診所運作方式，確認主治醫師參與程度</p>
+        </div>
+        <div class="question">
+          <p><strong>問題 C3</strong>：「如果我對治療效果不滿意或出現問題，您的糾紛處理機制是什麼？」</p>
+          <p>✅ 好的回答：說明溝通流程，表明願意尋求第三方意見</p>
+          <p>❌ 需注意：「簽了同意書就不能退費」</p>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// FEE LIST
+const feeItems = [
+  '初診諮詢費明細清楚',
+  '全口X光及分析費明確',
+  '矯正主治費（含所有回診）明確',
+  '矯正器材費（托槽、弓線等）明確',
+  '若需拔牙：拔牙費用（幾顆？）明確',
+  '維持器費用（種類、費用、保固）明確',
+  '若需追蹤X光：費用說明',
+  '中途停止治療的退費計算方式清楚',
+  '若超出預計時間：是否追加費用說明清楚',
+  '費用以書面方式提供'
+];
+
+function buildFeeList() {
+  const ul = document.getElementById('fee-list');
+  ul.innerHTML = feeItems.map((item,i) => `
+    <li>
+      <div class="check-box" id="fee-${i}" onclick="toggleFee(${i})"></div>
+      <div class="check-label">${item}</div>
+    </li>`).join('');
+}
+
+function toggleFee(i) {
+  const cb = document.getElementById('fee-' + i);
+  cb.classList.toggle('checked');
+  cb.textContent = cb.classList.contains('checked') ? '✓' : '';
+}
+
+function calcFee() {
+  const checked = document.querySelectorAll('#fee-list .check-box.checked').length;
+  const res = document.getElementById('result-fee');
+  res.style.display = 'block';
+  let cls, msg, advice;
+  if (checked >= 9) {cls='low'; msg='費用透明度良好'; advice='費用說明完整，可安心繼續。';}
+  else if (checked >= 6) {cls='mid'; msg='部分透明'; advice='建議要求診所補充說明未確認項目，再簽署任何文件。';}
+  else {cls='high'; msg='費用不透明，請謹慎'; advice='費用說明不完整。建議要求完整書面費用明細，或考慮比較其他診所。';}
+  res.className = `result-box ${cls}`;
+  res.innerHTML = `<h3>💰 結果：${msg}</h3><span class="result-score">${checked} / 10</span><p style="margin-top:12px;">${advice}</p>`;
+}
+
+function resetFee() {
+  document.querySelectorAll('#fee-list .check-box').forEach(cb => {
+    cb.classList.remove('checked'); cb.textContent = '';
+  });
+  document.getElementById('result-fee').style.display = 'none';
+}
+
+// ===== INIT =====
+window.onload = function() {
+  buildQ30();
+  buildStopbang();
+  buildTMD();
+  buildConsent();
+  buildTracking();
+  buildDoctorQuick();
+  buildDeepContent();
+  buildFeeList();
+};
+</script>
+</body>
+</html>
