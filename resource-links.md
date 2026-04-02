@@ -50,16 +50,21 @@
 **帳號**：zheyang0131@gmail.com
 **筆記本 URL**：https://notebooklm.google.com/notebook/5867caed-603f-4ac2-8732-0a23d709bb48?authuser=1
 **來源**：6 份 ppt-*.md 文件（全部已上傳 ✅）
-**影片摘要**：現代牙齒矯正檢查：一份為你... ✅ 已生成
+**狀態**：筆記本已設為公開（🔗 共用 已啟用）✅
 
-### ⚠️ 您需要手動完成的步驟（取得公開分享連結）
-1. 前往 https://notebooklm.google.com/notebook/5867caed-603f-4ac2-8732-0a23d709bb48?authuser=1
-2. 點擊右側影片摘要「現代牙齒矯正檢查...」旁的分享圖示（⟨）
-3. 在「筆記本存取權」下拉選單中，將「**限制**」改為「**知道連結的使用者**」
-4. 點擊「**複製「影片摘要」連結**」
-5. 將複製的連結更新至本文件及 index.html
+### 已完成影片（4/6）
+| # | 標題 | 公開連結 |
+|---|------|---------|
+| 1 | 矯正治療：你沒被告知的三大風險 | https://notebooklm.google.com/notebook/5867caed-603f-4ac2-8732-0a23d709bb48?artifactId=2b1a4fac-9a64-4b23-a9b7-6c377124432a |
+| 2 | 矯正治療安全自評指南 | https://notebooklm.google.com/notebook/5867caed-603f-4ac2-8732-0a23d709bb48?artifactId=056a5fa2-e713-4c9a-8f02-4dd77098c09a |
+| 3 | 矯正知情同意與法律保護 | https://notebooklm.google.com/notebook/5867caed-603f-4ac2-8732-0a23d709bb48?artifactId=a62d81c8-eabe-453d-aaa5-04e5c3d452b8 |
+| 4 | 現代牙齒矯正檢查：一份為你的安全指南 | https://notebooklm.google.com/notebook/5867caed-603f-4ac2-8732-0a23d709bb48?artifactId=c040b54c-6a11-434f-9543-9e2d9503a9a2 |
+| 5 | （生成中） | — |
+| 6 | （生成中） | — |
 
-**影片摘要公開分享連結**：（請依上方步驟取得後更新）
+### NotebookLM 簡報（5/6 完成）
+- 5 份 PPTX 放入 slides/ 後自動處理
+- 第 6 份仍在生成中
 
 ---
 
