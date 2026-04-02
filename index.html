@@ -166,6 +166,7 @@ footer strong{color:white;}
       <a href="#" onclick="showSection('doctor-check')" id="nav-doctor-check">醫師驗證</a>
       <a href="#" onclick="showSection('legal')" id="nav-legal">法律資訊</a>
       <a href="#" onclick="showSection('complaint')" id="nav-complaint">申訴指南</a>
+      <a href="#" onclick="showSection('presentations')" id="nav-presentations">互動簡報</a>
       <a href="#" onclick="showSection('downloads')" id="nav-downloads">下載資源</a>
     </div>
   </div>
@@ -225,6 +226,12 @@ footer strong{color:white;}
       <h3>申訴與自我保護指南</h3>
       <p>從治療前預防、治療中監控，到發生糾紛後的完整申訴流程。含各縣市衛生局聯絡方式。</p>
       <br><a href="#" onclick="showSection('complaint');return false;" class="btn btn-primary" style="font-size:13px;padding:8px 16px;">查看指南 →</a>
+    </div>
+    <div class="card" onclick="showSection('presentations')">
+      <div class="card-icon">🎯</div>
+      <h3>互動簡報（Gamma）</h3>
+      <p>6份 AI 生成的專業簡報：入門版×2、進階版×2、專業版×2。深綠配色，圖表豐富，可直接分享。</p>
+      <br><a href="#" onclick="showSection('presentations');return false;" class="btn btn-primary" style="font-size:13px;padding:8px 16px;">查看簡報 →</a>
     </div>
     <div class="card" onclick="showSection('downloads')">
       <div class="card-icon">📄</div>
@@ -770,6 +777,65 @@ footer strong{color:white;}
         <strong>申訴流程</strong>：① 準備文件 → ② 填寫申訴書 → ③ 提交衛生局 → ④ 等待受理通知（7–14工作天）→ ⑤ 配合調查/調解 → ⑥ 若未解決，考慮民事訴訟
       </div>
     </div>
+  </div>
+</div>
+
+<!-- ========== PRESENTATIONS ========== -->
+<div id="section-presentations" class="section">
+  <h2 class="section-title">🎯 互動簡報資源（Gamma.app）</h2>
+  <p style="margin-bottom:20px;color:var(--text-light);">6份由 AI 輔助生成的專業簡報，包含豐富數據圖表，可直接線上瀏覽或分享。</p>
+
+  <h3 style="color:var(--primary);margin-bottom:14px;">📗 入門版——一般大眾</h3>
+  <div class="download-grid">
+    <div class="download-card">
+      <h4>矯正治療前你需要知道的三件事</h4>
+      <p>呼吸道・顳顎關節・牙根吸收，用生活化語言說明三大核心風險。適合首次了解矯正安全的患者。</p>
+      <div class="download-meta">15頁 | 深綠配色 | 適合一般大眾</div>
+      <a href="https://gamma.app/docs/-jvm8my4alu68w2r" target="_blank" class="btn btn-primary">🔗 開啟簡報</a>
+    </div>
+    <div class="download-card">
+      <h4>矯正前你需要問的25個問題——選醫師篇</h4>
+      <p>25個關鍵問題幫助你在初診時評估矯正醫師的安全意識與評估完整度。</p>
+      <div class="download-meta">15頁 | 深綠配色 | 適合初診前準備</div>
+      <a href="https://gamma.app/docs/25--mg1ii6qcmr6jhd9" target="_blank" class="btn btn-primary">🔗 開啟簡報</a>
+    </div>
+  </div>
+
+  <h3 style="color:var(--primary);margin:24px 0 14px;">📘 進階版——具基本醫療知識的成人</h3>
+  <div class="download-grid">
+    <div class="download-card">
+      <h4>矯正治療安全自評——呼吸道與顳顎關節完整評估</h4>
+      <p>STOP-BANG完整版（敏感度93%）、DC/TMD篩查問卷、CBCT氣道標準值、個人化風險矩陣。</p>
+      <div class="download-meta">15頁 | 深綠配色 | 含可列印評估量表</div>
+      <a href="https://gamma.app/docs/-rpmpv0pszafw7ot" target="_blank" class="btn btn-primary">🔗 開啟簡報</a>
+    </div>
+    <div class="download-card">
+      <h4>矯正治療知情同意完整指南——牙根吸收・法律保護</h4>
+      <p>牙根吸收科學機制（72.8%）、台灣法律框架（醫療法81/82條）、文件保存、申訴管道。</p>
+      <div class="download-meta">15頁 | 深綠配色 | 含法律資源</div>
+      <a href="https://gamma.app/docs/-82mz1l59op2w48g" target="_blank" class="btn btn-primary">🔗 開啟簡報</a>
+    </div>
+  </div>
+
+  <h3 style="color:var(--primary);margin:24px 0 14px;">📕 專業版——牙科醫師・醫學生・研究者</h3>
+  <div class="download-grid">
+    <div class="download-card">
+      <h4>矯正治療安全評估的循證醫學框架——DC/TMD・CBCT・OR/CI</h4>
+      <p>OR=1.84統計解讀、DC/TMD雙軸分類、CBCT TMJ判讀、STOP-BANG方法學、臨床決策樹。</p>
+      <div class="download-meta">15頁 | 學術期刊風格 | 含完整參考文獻</div>
+      <a href="https://gamma.app/docs/-9mgxlhdorleibnq" target="_blank" class="btn btn-secondary">🔗 開啟簡報</a>
+    </div>
+    <div class="download-card">
+      <h4>牙根吸收的循證風險分層與臨床決策樹——系統性文獻回顧</h4>
+      <p>Levander分級、Kjær分類（Type III OR=3.2）、四色風險矩陣、Grade 3-4標準處置三步驟。</p>
+      <div class="download-meta">15頁 | 深海藍配色 | 含可列印臨床行動清單</div>
+      <a href="https://gamma.app/docs/-lhq63ybyp17cupj" target="_blank" class="btn btn-secondary">🔗 開啟簡報</a>
+    </div>
+  </div>
+
+  <br>
+  <div class="info-box">
+    <strong>使用說明</strong>：所有簡報均為公開連結，點擊即可在瀏覽器中查看，無需登入。簡報使用 Gamma.app 製作，支援全螢幕展示。建議將進階版簡報分享給有意了解矯正風險的親友。
   </div>
 </div>
 
