@@ -235,7 +235,7 @@ footer a{color:rgba(255,255,255,.8);}
 
 <!-- AI 免責聲明橫幅 -->
 <div class="ai-banner">
-  🤖 <strong>本網站內容由 AI 輔助生成</strong>，根據 SciSpace 456 篇學術文獻整理，<strong>僅供衛教參考，不構成醫療診斷或法律建議</strong>。實際治療請諮詢合格醫療人員。
+  🤖 <strong>本網站內容由 AI 輔助生成</strong>，根據 Elicit × Consensus × SciSpace 三庫學術文獻整理，<strong>僅供衛教參考，不構成醫療診斷或法律建議</strong>。實際治療請諮詢合格醫療人員。
 </div>
 
 <!-- 導覽列 -->
@@ -245,10 +245,12 @@ footer a{color:rgba(255,255,255,.8);}
     <button class="nav-burger" onclick="toggleNav()">☰</button>
     <div class="nav-links" id="navLinks">
       <a href="#" onclick="show('home')" class="active" id="nav-home">🏠 首頁</a>
+      <a href="#" onclick="show('assessment')" id="nav-assessment">🔍 三大評估</a>
+      <a href="#" onclick="show('secondopinion')" id="nav-secondopinion">💬 第二意見</a>
       <a href="#" onclick="show('learn')" id="nav-learn">📖 學習路徑</a>
-      <a href="#" onclick="show('videos')" id="nav-videos">🎬 AI影片</a>
-      <a href="#" onclick="show('gallery')" id="nav-gallery">📊 資訊圖表</a>
       <a href="#" onclick="show('presentations')" id="nav-presentations">🎯 互動簡報</a>
+      <a href="#" onclick="show('market')" id="nav-market">🏭 市場反思</a>
+      <a href="#" onclick="show('research')" id="nav-research">📚 研究與方法</a>
       <a href="#" onclick="show('quiz')" id="nav-quiz">✅ 自我評估</a>
       <a href="#" onclick="show('download')" id="nav-download">📥 下載</a>
       <a href="#" onclick="show('about')" id="nav-about">ℹ️ 關於</a>
@@ -269,8 +271,10 @@ footer a{color:rgba(255,255,255,.8);}
     <div class="stat-pill">🔬 牙根狀況 影像追蹤有助監測</div>
   </div>
   <div class="hero-btns">
-    <a href="#" onclick="show('quiz');return false;" class="btn btn-white">✅ 先做 3 分鐘自評</a>
-    <a href="#" onclick="show('learn');return false;" class="btn btn-outline">📖 了解評估項目</a>
+    <a href="#" onclick="show('assessment');return false;" class="btn btn-white">🔍 三大安全評估</a>
+    <a href="#" onclick="show('secondopinion');return false;" class="btn btn-white">💬 第二意見工具</a>
+    <a href="#" onclick="show('quiz');return false;" class="btn btn-outline">✅ 先做 3 分鐘自評</a>
+    <a href="#" onclick="show('learn');return false;" class="btn btn-outline">📖 學習路徑</a>
   </div>
 </div>
 
@@ -278,8 +282,32 @@ footer a{color:rgba(255,255,255,.8);}
   <h2 class="sec-title">矯正前的三大安全評估</h2>
   <p class="sec-sub">這些評估不是要嚇你——而是讓你在治療前就準備好正確的問題，與醫師做最有效的溝通。</p>
 
+  <!-- 新增：研究與市場反思快速入口 -->
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-bottom:32px;padding:20px;background:var(--card);border-radius:var(--radius);border:1px solid var(--border);">
+    <a href="#" onclick="show('secondopinion');return false;" style="text-decoration:none;background:var(--green-lt);border-radius:10px;padding:14px;display:block;color:var(--text);">
+      <div style="font-size:22px;margin-bottom:6px;">💬</div>
+      <strong style="font-size:14px;color:var(--green);">第二意見工具</strong>
+      <p style="font-size:12px;color:var(--text-sub);margin-top:4px;">看診前 25 個問題 + 第二意見清單</p>
+    </a>
+    <a href="#" onclick="show('market');return false;" style="text-decoration:none;background:var(--orange-lt);border-radius:10px;padding:14px;display:block;color:var(--text);">
+      <div style="font-size:22px;margin-bottom:6px;">🏭</div>
+      <strong style="font-size:14px;color:var(--orange);">市場反思專題</strong>
+      <p style="font-size:12px;color:var(--text-sub);margin-top:4px;">為什麼完整診斷被邊緣化？結構性分析</p>
+    </a>
+    <a href="#" onclick="show('research');return false;" style="text-decoration:none;background:var(--blue-lt);border-radius:10px;padding:14px;display:block;color:var(--text);">
+      <div style="font-size:22px;margin-bottom:6px;">📚</div>
+      <strong style="font-size:14px;color:var(--blue);">研究與方法</strong>
+      <p style="font-size:12px;color:var(--text-sub);margin-top:4px;">Elicit + Consensus + SciSpace 三大資料庫</p>
+    </a>
+    <a href="#" onclick="show('presentations');return false;" style="text-decoration:none;background:var(--purple-lt);border-radius:10px;padding:14px;display:block;color:var(--text);">
+      <div style="font-size:22px;margin-bottom:6px;">🎯</div>
+      <strong style="font-size:14px;color:var(--purple);">互動簡報（6份）</strong>
+      <p style="font-size:12px;color:var(--text-sub);margin-top:4px;">含完整引用的 Gamma 簡報，20+ 張/份</p>
+    </a>
+  </div>
+
   <div class="risk-cards">
-    <div class="risk-card" onclick="show('learn');setPath('beginner')">
+    <div class="risk-card" onclick="show('assessment')">
       <div class="risk-icon green">🦷</div>
       <h3>顳顎關節（TMJ）</h3>
       <p>顳顎關節在耳朵前方，負責開口咬合。矯正前若未評估，治療後可能出現彈響、疼痛或開口受限。</p>
@@ -470,15 +498,15 @@ footer a{color:rgba(255,255,255,.8);}
         <p>適合：牙科醫師、醫學生、研究者。</p>
         <div class="path-actions">
           <div class="action-row">
-            <a href="https://gamma.app/docs/-9mgxlhdorleibnq" target="_blank" class="btn btn-sm" style="background:var(--purple);color:#fff;">🎯 簡報1：循證醫學框架</a>
-            <a href="https://gamma.app/docs/-lhq63ybyp17cupj" target="_blank" class="btn btn-sm" style="background:var(--purple);color:#fff;">🎯 簡報2：EARR風險分層</a>
+            <a href="https://gamma.app/docs/0mosoqve4vh3ga4" target="_blank" class="btn btn-sm" style="background:var(--purple);color:#fff;">🎯 簡報：拔牙與診斷（三庫版）</a>
+            <a href="https://gamma.app/docs/u2u0i5mx8b3xr43" target="_blank" class="btn btn-sm" style="background:var(--purple);color:#fff;">🎯 簡報：整合評估（三庫版）</a>
           </div>
           <div class="action-row">
             <a href="https://notebooklm.google.com/notebook/5867caed-603f-4ac2-8732-0a23d709bb48?artifactId=c040b54c-6a11-434f-9543-9e2d9503a9a2" target="_blank" class="btn btn-teal btn-sm">▶ AI 影片：現代矯正檢查</a>
             <a href="report-expert.pdf" download class="btn btn-ghost btn-sm">📥 專業版 PDF</a>
           </div>
           <div class="action-row">
-            <a href="scispace-chinese-review.pdf" download class="btn btn-ghost btn-sm">📄 SciSpace 學術回顧（中文）</a>
+            <a href="#" onclick="show('research');return false;" class="btn btn-ghost btn-sm">📚 查看三庫整合研究來源</a>
           </div>
         </div>
       </div>
@@ -493,12 +521,12 @@ footer a{color:rgba(255,255,255,.8);}
         <div class="path-actions">
           <div class="action-row">
             <a href="https://gamma.app/docs/-lhq63ybyp17cupj" target="_blank" class="btn btn-sm" style="background:var(--purple);color:#fff;">📊 EARR 決策樹完整版</a>
-            <a href="scispace-chinese-review.pdf" download class="btn btn-ghost btn-sm">📄 下載學術回顧</a>
+            <a href="#" onclick="show('research');return false;" class="btn btn-ghost btn-sm">📚 查看研究來源</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="info-box">💡 <strong>關鍵數據</strong>：TMD OR=1.84 | EARR 平均 0.79mm | STOP-BANG 敏感度 93% | Kjær III OR=3.2 | CBCT MCA&lt;50mm² → 高 OSA 風險</div>
+    <div class="info-box">💡 <strong>三庫整合關鍵數據</strong>：TMD OR=1.84（Elicit, Coronel-Zubiate 2022）| 錯牙合 TMD 盛行率 43%（Consensus, Huang 2025）| EARR 嚴重案例 14.8%（Elicit, Bayir 2021）| STOP-BANG 敏感度 93%（Elicit, Chung 2008）| Kjær III OR=3.2（SciSpace）| 拔牙對氣道無顯著影響（Consensus, Papageorgiou 2025, 891位患者）</div>
   </div>
 </div>
 
@@ -507,7 +535,7 @@ footer a{color:rgba(255,255,255,.8);}
      ====================================== -->
 <div id="section-videos" class="section">
   <h2 class="sec-title">AI 影片摘要</h2>
-  <p class="sec-sub">由 Google NotebookLM AI 根據 6 份學術文件生成，點擊直接觀看，無需登入</p>
+  <p class="sec-sub">由 Google NotebookLM AI 根據 Elicit × Consensus × SciSpace 三庫整合學術文件生成，點擊直接觀看，無需登入</p>
 
   <div class="video-grid">
     <div class="video-card">
@@ -585,7 +613,7 @@ footer a{color:rgba(255,255,255,.8);}
   </div>
 
   <br>
-  <div class="info-box">📚 以上影片均來自同一個 NotebookLM 知識庫（6 份學術文件），如需查詢特定問題，可直接 <a href="https://notebooklm.google.com/notebook/5867caed-603f-4ac2-8732-0a23d709bb48" target="_blank">前往筆記本對話</a>。</div>
+  <div class="info-box">📚 以上影片均來自同一個 NotebookLM 知識庫（Elicit × Consensus × SciSpace 三庫整合文件），如需查詢特定問題，可直接 <a href="https://notebooklm.google.com/notebook/5867caed-603f-4ac2-8732-0a23d709bb48" target="_blank">前往筆記本對話</a>。</div>
 </div>
 
 <!-- ======================================
@@ -623,7 +651,7 @@ footer a{color:rgba(255,255,255,.8);}
   </div>
 
   <br>
-  <div class="warn-box">⚠️ 以上圖表由 AI 根據學術文獻自動生成，數據引用自 SciSpace 456 篇文獻回顧，僅供衛教參考，不作為個人診斷依據。</div>
+  <div class="warn-box">⚠️ 以上圖表由 AI 根據學術文獻自動生成，數據整合自 Elicit × Consensus × SciSpace 三大資料庫（系統性回顧與 meta-analysis 優先），僅供衛教參考，不作為個人診斷依據。</div>
 </div>
 
 <!-- ======================================
@@ -631,7 +659,69 @@ footer a{color:rgba(255,255,255,.8);}
      ====================================== -->
 <div id="section-presentations" class="section">
   <h2 class="sec-title">互動簡報（Gamma.app）</h2>
-  <p class="sec-sub">共 6 份 AI 生成的專業簡報，含豐富數據圖表，點擊即可在瀏覽器直接瀏覽，無需下載</p>
+  <p class="sec-sub">共 12 份 AI 生成的專業簡報，含豐富數據圖表，點擊即可在瀏覽器直接瀏覽，無需下載</p>
+
+  <!-- ===== 2026 三庫整合版 ===== -->
+  <div style="background:linear-gradient(135deg,#e8f4fd,#f0f4ff);border-radius:var(--radius);padding:20px 24px;margin-bottom:28px;border-left:4px solid var(--blue);">
+    <strong style="color:var(--blue);">🆕 2026 三庫整合版</strong><span style="font-size:13px;color:#555;margin-left:8px;">以下 6 份簡報基於 Elicit × Consensus × SciSpace 三大資料庫整合，各含 20 張以上投影片與完整引用資料</span>
+  </div>
+
+  <div class="pres-group">
+    <div class="pres-group-title">🌱 <span class="level-badge beginner">病人導向</span> 一般大眾</div>
+    <div class="pres-grid">
+      <div class="pres-card" style="border-top:3px solid var(--green);">
+        <h4>矯正前，為什麼不能只看牙齒排列？</h4>
+        <p>完整診斷概念入門。從 TMJ、呼吸道、牙根三大面向說明為何排列整齊 ≠ 治療完整。附 Elicit 系統性回顧引用。</p>
+        <div class="pres-meta">20+ 頁 · 三庫整合版 · 適合初診前患者</div>
+        <a href="https://gamma.app/docs/rv9xbexznnsr5tj" target="_blank" class="btn btn-green btn-sm">🔗 開啟簡報</a>
+      </div>
+      <div class="pres-card" style="border-top:3px solid var(--green);">
+        <h4>矯正前一定要知道的三大安全評估</h4>
+        <p>TMJ / 呼吸道 / EARR 三大評估完整說明，含風險數據、篩查問題與行動建議。適合病人與家長。</p>
+        <div class="pres-meta">20+ 頁 · 三庫整合版 · 含完整引用</div>
+        <a href="https://gamma.app/docs/5a6kbyqsdsbdleq" target="_blank" class="btn btn-green btn-sm">🔗 開啟簡報</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pres-group">
+    <div class="pres-group-title">📊 <span class="level-badge advanced">進階分析</span> 有求知欲的成年患者</div>
+    <div class="pres-grid">
+      <div class="pres-card" style="border-top:3px solid var(--blue);">
+        <h4>拔牙不是原罪，缺乏完整診斷才是風險</h4>
+        <p>拔牙與不拔牙的循證比較，降低療法對立。核心主軸：完整診斷才是安全保障，而非特定療法。</p>
+        <div class="pres-meta">20+ 頁 · 三庫整合版 · 含 OR/CI 數據</div>
+        <a href="https://gamma.app/docs/0mosoqve4vh3ga4" target="_blank" class="btn btn-sm" style="background:var(--blue);color:#fff;">🔗 開啟簡報</a>
+      </div>
+      <div class="pres-card" style="border-top:3px solid var(--blue);">
+        <h4>為什麼有些人矯正後牙齒整齊了，卻還是不舒服？</h4>
+        <p>說明功能、呼吸、關節與穩定性的整合重要性。矯正後仍不舒服的結構性原因分析。</p>
+        <div class="pres-meta">20+ 頁 · 三庫整合版 · 適合矯正後患者</div>
+        <a href="https://gamma.app/docs/u2u0i5mx8b3xr43" target="_blank" class="btn btn-sm" style="background:var(--blue);color:#fff;">🔗 開啟簡報</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="pres-group">
+    <div class="pres-group-title">🔬 <span class="level-badge expert">深度分析</span> 市場反思 × 病人行動</div>
+    <div class="pres-grid">
+      <div class="pres-card" style="border-top:3px solid var(--purple);">
+        <h4>矯正市場為什麼愈來愈像商品化流程？</h4>
+        <p>結構性分析：數位化、商品化如何邊緣化完整診斷。引用 Habumugisha 25 年 CAT 回顧、Vaid Golden Circle Model 等研究。</p>
+        <div class="pres-meta">20+ 頁 · 三庫整合版 · 大眾/媒體適用</div>
+        <a href="https://gamma.app/docs/e96jehrms6xorwv" target="_blank" class="btn btn-sm" style="background:var(--purple);color:#fff;">🔗 開啟簡報</a>
+      </div>
+      <div class="pres-card" style="border-top:3px solid var(--purple);">
+        <h4>矯正前第二意見：你至少該問的 25 個問題</h4>
+        <p>25 個關鍵問題詳解版，含每題背後的研究依據。導向病人工具與行動，引用 Stacey 2017 Cochrane Review（105 RCT）。</p>
+        <div class="pres-meta">20+ 頁 · 三庫整合版 · 初診前必備</div>
+        <a href="https://gamma.app/docs/7qfx6yqk97kko9j" target="_blank" class="btn btn-sm" style="background:var(--purple);color:#fff;">🔗 開啟簡報</a>
+      </div>
+    </div>
+  </div>
+
+  <hr style="border:none;border-top:1px solid var(--border);margin:28px 0;">
+  <p style="font-size:13px;color:var(--text-sub);margin-bottom:20px;">以下為舊版簡報（SciSpace 單庫版，仍可參考）</p>
 
   <div class="pres-group">
     <div class="pres-group-title">🌱 <span class="level-badge beginner">入門版</span> 一般大眾</div>
@@ -690,7 +780,7 @@ footer a{color:rgba(255,255,255,.8);}
   <!-- NotebookLM 簡報線上觀看 -->
   <div style="margin-top:36px; padding:24px; background:linear-gradient(135deg,#e8f4fd,#f0f4ff); border-radius:12px; border:1px solid #b3d4f5;">
     <h3 style="color:#2b6cb0;margin-bottom:6px;">🎞️ NotebookLM 簡報摘要（線上觀看）</h3>
-    <p style="font-size:13.5px;color:#555;margin-bottom:18px;">由 Google NotebookLM AI 根據 456 篇學術文獻自動生成，點擊即可在 NotebookLM 線上瀏覽，無需下載。</p>
+    <p style="font-size:13.5px;color:#555;margin-bottom:18px;">由 Google NotebookLM AI 根據 Elicit × Consensus × SciSpace 三庫整合學術文獻自動生成，點擊即可在 NotebookLM 線上瀏覽，無需下載。</p>
     <div class="pres-grid">
       <div class="pres-card" style="border-top:3px solid var(--green);background:#fff;">
         <span class="level-badge beginner" style="margin-bottom:8px;display:inline-block;">入門版</span>
@@ -857,7 +947,7 @@ footer a{color:rgba(255,255,255,.8);}
   <p class="sec-sub">所有文件均為 PDF 格式，可免費下載。建議在矯正初診前閱讀，並將重要問題帶去諮詢。</p>
 
   <div class="warn-box" style="margin-bottom:24px;">
-    🤖 <strong>AI 生成聲明</strong>：以下所有文件由 Claude AI 輔助整理，學術數據引用自 SciSpace 456 篇學術文獻（2018–2024）。內容僅供衛教參考，不構成個人醫療建議。製作：氧樂多牙醫診所 趙哲暘醫師。
+    🤖 <strong>AI 生成聲明</strong>：以下所有文件由 Claude AI 輔助整理，學術數據引用自 Elicit × Consensus × SciSpace 三庫學術文獻（2018–2024）。內容僅供衛教參考，不構成個人醫療建議。製作：氧樂多牙醫診所 趙哲暘醫師。
   </div>
 
   <h3 style="color:var(--green);margin-bottom:16px;">📖 三層次安全指南</h3>
@@ -987,6 +1077,320 @@ footer a{color:rgba(255,255,255,.8);}
 </div>
 
 <!-- 燈箱 -->
+<!-- ======================================
+     三大安全評估總覽頁
+     ====================================== -->
+<div id="section-assessment" class="section">
+  <h2 class="sec-title">矯正前三大安全評估</h2>
+  <p class="sec-sub">這三個評估面向是矯正前最常被忽略、對長期結果影響最大的。了解它們，讓你與醫師的溝通更有方向。</p>
+
+  <div style="background:var(--blue-lt);border-radius:var(--radius);padding:20px 24px;margin-bottom:32px;border-left:4px solid var(--blue);">
+    <strong style="color:var(--blue);">研究依據</strong>：以下內容基於 Elicit、Consensus、SciSpace 三大資料庫的系統性回顧與 meta-analysis 文獻整理，不將關聯性寫為必然因果。
+  </div>
+
+  <div class="risk-cards">
+    <div class="risk-card" style="border-top:4px solid var(--teal);">
+      <div class="risk-icon green">🦷</div>
+      <h3>第一大評估：顳顎關節（TMJ）</h3>
+      <p>顳顎關節症狀（TMD）在錯牙合患者中盛行率高達 43%（Huang et al. 2025, 32篇研究 meta-analysis）。矯正治療與 TMD 有關聯性（OR=1.84，Coronel-Zubiate 2022），但不等於因果。</p>
+      <p style="margin-top:12px;font-size:13px;color:var(--text-sub);">
+        <strong>你應該詢問醫師：</strong><br>
+        ・你有做 TMJ 評估嗎？用什麼方法（DC/TMD 篩查？）<br>
+        ・我有夜磨牙嗎？（夜磨牙使 TMD 風險增加 2.25 倍）<br>
+        ・如果矯正後出現關節問題，你的處理計畫是什麼？
+      </p>
+      <span class="risk-stat">DC/TMD：靈敏度 86%，特異度 98%</span>
+    </div>
+
+    <div class="risk-card" style="border-top:4px solid var(--blue);">
+      <div class="risk-icon blue">💨</div>
+      <h3>第二大評估：呼吸道與睡眠</h3>
+      <p>拔牙矯正對呼吸道無顯著影響（中度強度證據，Papageorgiou 2025，891位患者）。但 RME、功能矯正器可顯著改善兒童呼吸道空間。高風險族群應在矯正前評估。</p>
+      <p style="margin-top:12px;font-size:13px;color:var(--text-sub);">
+        <strong>高風險族群特徵：</strong><br>
+        ・口呼吸、打鼾、白天嗜睡（Epworth ≥10）<br>
+        ・Class II 骨性、ANB 角增大、兒童扁桃腺增大<br>
+        ・STOP-BANG ≥3 分（中重度 OSA 敏感性 93%）
+      </p>
+      <span class="risk-stat" style="background:var(--blue-lt);color:var(--blue);">STOP-BANG 敏感性 93%（中重度 OSA）</span>
+    </div>
+
+    <div class="risk-card" style="border-top:4px solid var(--orange);">
+      <div class="risk-icon orange">🔬</div>
+      <h3>第三大評估：牙根吸收（EARR）</h3>
+      <p>幾乎所有矯正患者都有輕微牙根吸收。嚴重案例（根長縮短 >4mm 或 >1/3）盛行率約 14.8%（Bayir 2021，1,356位患者）。最易影響：上顎正中門牙、側門牙。</p>
+      <p style="margin-top:12px;font-size:13px;color:var(--text-sub);">
+        <strong>高風險患者特徵（Pineda Vélez 2024 Umbrella review）：</strong><br>
+        ・女性、成人、根型異常（吸管形/彎曲根）<br>
+        ・計畫大量前牙後縮、療程超過 2 年<br>
+        ・有前次牙齒外傷史
+      </p>
+      <span class="risk-stat" style="background:var(--orange-lt);color:var(--orange);">嚴重 EARR 盛行率約 14.8%（1,356位患者）</span>
+    </div>
+  </div>
+
+  <div style="background:var(--green-lt);border-radius:var(--radius);padding:24px;margin-top:32px;">
+    <h3 style="color:var(--green);margin-bottom:12px;">完整診斷的 8 個面向</h3>
+    <p style="font-size:13px;color:var(--text-sub);margin-bottom:16px;">除三大安全評估外，完整診斷還應包含：</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;font-size:13px;">
+      <div>🦴 <strong>骨骼評估</strong>：SNA/SNB/ANB、頭顱 X 光分析</div>
+      <div>🦷 <strong>牙齒評估</strong>：排列、空間、中線、覆蓋</div>
+      <div>😊 <strong>顏面美觀</strong>：側貌、嘴唇豐滿度</div>
+      <div>🦷 <strong>牙周評估</strong>：牙齦健康、骨高度</div>
+      <div>📋 <strong>全身病史</strong>：過敏、藥物、系統疾病</div>
+      <div>💬 <strong>患者期望</strong>：主訴與治療目標</div>
+    </div>
+    <p style="margin-top:16px;font-size:13px;color:var(--text-sub);">
+      <strong>關鍵研究：</strong>Tüfekçi et al. (2024, AJODO) 顯示：加入牙根+骨骼資訊後，<strong>33-43% 的矯正醫師改變治療計畫</strong>（p&lt;0.001）。數位排牙模擬≠完整診斷。
+    </p>
+  </div>
+
+  <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
+    <a href="#" onclick="show('secondopinion');return false;" class="btn btn-green">💬 第二意見工具與問題清單</a>
+    <a href="#" onclick="show('quiz');return false;" class="btn btn-ghost">✅ 做矯正風險自評</a>
+    <a href="#" onclick="show('research');return false;" class="btn btn-ghost">📚 查看研究來源</a>
+  </div>
+</div>
+
+<!-- ======================================
+     第二意見入口頁
+     ====================================== -->
+<div id="section-secondopinion" class="section">
+  <h2 class="sec-title">第二意見與病人工具</h2>
+  <p class="sec-sub">研究顯示，帶著準備好的問題去看診的患者，做出更好的醫療決策（Stacey et al. 2017 Cochrane Review，105個 RCT）。</p>
+
+  <div style="background:linear-gradient(135deg,var(--green-dk),var(--teal));border-radius:var(--radius);padding:28px;color:#fff;margin-bottom:32px;">
+    <h3 style="margin-bottom:10px;font-size:20px;">什麼情況下應該考慮第二意見？</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin-top:16px;font-size:13px;">
+      <div style="background:rgba(255,255,255,.15);border-radius:10px;padding:12px;">⚠️ 諮詢不到 20 分鐘就直接報價</div>
+      <div style="background:rgba(255,255,255,.15);border-radius:10px;padding:12px;">⚠️ 計畫拔牙但未解釋完整評估依據</div>
+      <div style="background:rgba(255,255,255,.15);border-radius:10px;padding:12px;">⚠️ 有 TMJ 症狀但醫師說「不重要」</div>
+      <div style="background:rgba(255,255,255,.15);border-radius:10px;padding:12px;">⚠️ 有打鼾/口呼吸但醫師未詢問</div>
+      <div style="background:rgba(255,255,255,.15);border-radius:10px;padding:12px;">⚠️ 問題被迴避或答案模糊</div>
+      <div style="background:rgba(255,255,255,.15);border-radius:10px;padding:12px;">⚠️ 費用遠低於市場（可能省略評估）</div>
+    </div>
+  </div>
+
+  <h3 style="font-size:18px;font-weight:700;color:var(--green);margin-bottom:16px;">看診前 25 個問題清單</h3>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;margin-bottom:28px;">
+    <div style="background:var(--card);border-radius:var(--radius);padding:20px;border:1px solid var(--border);border-left:4px solid var(--teal);">
+      <h4 style="color:var(--teal);margin-bottom:10px;">關於診斷（問題 1–5）</h4>
+      <ol style="font-size:13px;color:var(--text-sub);line-height:2;padding-left:16px;">
+        <li>你的完整診斷包含哪些評估項目？</li>
+        <li>你拍了哪些影像？頭顱側位？全口？CBCT？</li>
+        <li>你做了頭顱測量分析嗎？SNA/SNB/ANB？</li>
+        <li>你評估了我的顏面美觀和側貌嗎？</li>
+        <li>你看過我的牙周狀況嗎？</li>
+      </ol>
+    </div>
+    <div style="background:var(--card);border-radius:var(--radius);padding:20px;border:1px solid var(--border);border-left:4px solid var(--green);">
+      <h4 style="color:var(--green);margin-bottom:10px;">關於 TMJ（問題 6–10）</h4>
+      <ol start="6" style="font-size:13px;color:var(--text-sub);line-height:2;padding-left:16px;">
+        <li>你評估了我的顳顎關節嗎？用什麼方法？</li>
+        <li>我有 TMD 的風險嗎？</li>
+        <li>你有用 DC/TMD 標準做評估嗎？</li>
+        <li>我有夜磨牙嗎？這對計畫有影響嗎？</li>
+        <li>如果矯正後出現關節問題，計畫是什麼？</li>
+      </ol>
+    </div>
+    <div style="background:var(--card);border-radius:var(--radius);padding:20px;border:1px solid var(--border);border-left:4px solid var(--blue);">
+      <h4 style="color:var(--blue);margin-bottom:10px;">關於呼吸道（問題 11–14）</h4>
+      <ol start="11" style="font-size:13px;color:var(--text-sub);line-height:2;padding-left:16px;">
+        <li>你評估了我的呼吸道嗎？</li>
+        <li>我有口呼吸/打鼾，這對計畫有影響嗎？</li>
+        <li>我需要在矯正前做睡眠評估嗎？</li>
+        <li>你的計畫會影響我的呼吸道嗎？</li>
+      </ol>
+    </div>
+    <div style="background:var(--card);border-radius:var(--radius);padding:20px;border:1px solid var(--border);border-left:4px solid var(--orange);">
+      <h4 style="color:var(--orange);margin-bottom:10px;">關於拔牙與牙根（問題 15–20）</h4>
+      <ol start="15" style="font-size:13px;color:var(--text-sub);line-height:2;padding-left:16px;">
+        <li>你建議拔牙的根據是什麼？</li>
+        <li>不拔牙有哪些替代方案？各自的風險？</li>
+        <li>拔牙或不拔牙，對我的呼吸道各有什麼影響？</li>
+        <li>我有 EARR（牙根吸收）的風險嗎？</li>
+        <li>你的牙根吸收監測計畫是什麼？</li>
+        <li>如果牙根在矯正中縮短，你會怎麼處理？</li>
+      </ol>
+    </div>
+    <div style="background:var(--card);border-radius:var(--radius);padding:20px;border:1px solid var(--border);border-left:4px solid var(--purple);">
+      <h4 style="color:var(--purple);margin-bottom:10px;">關於治療計畫與知情同意（問題 21–25）</h4>
+      <ol start="21" style="font-size:13px;color:var(--text-sub);line-height:2;padding-left:16px;">
+        <li>你的數位計畫包含牙根和骨骼資訊嗎？</li>
+        <li>我的案例複雜度是哪一類？</li>
+        <li>治療中如果需要精調，費用如何計算？</li>
+        <li>你的同意書涵蓋了哪些主要風險？</li>
+        <li>如果我有疑慮，我可以尋求第二意見嗎？</li>
+      </ol>
+    </div>
+  </div>
+
+  <div style="background:var(--green-lt);border-radius:var(--radius);padding:20px;margin-bottom:24px;">
+    <h4 style="color:var(--green);margin-bottom:8px;">帶去第二意見的資料清單</h4>
+    <div style="font-size:13px;color:var(--text-sub);display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;">
+      <div>□ 現有診斷報告或治療計畫</div>
+      <div>□ 已拍攝的 X 光片（頭顱側位、全口）</div>
+      <div>□ 牙齒模型或 3D 掃描數據</div>
+      <div>□ 你的症狀清單（TMJ / 呼吸道）</div>
+      <div>□ 這份 25 個問題清單</div>
+      <div>□ STOP-BANG 填寫結果</div>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:12px;flex-wrap:wrap;">
+    <a href="report-beginner.pdf" download class="btn btn-green">📥 下載入門版指南（含問題清單）</a>
+    <a href="#" onclick="show('quiz');return false;" class="btn btn-ghost">✅ 做矯正風險自評</a>
+    <a href="#" onclick="show('assessment');return false;" class="btn btn-ghost">🔍 了解三大評估</a>
+  </div>
+</div>
+
+<!-- ======================================
+     市場反思專題頁
+     ====================================== -->
+<div id="section-market" class="section">
+  <h2 class="sec-title">市場反思：當矯正愈來愈像商品</h2>
+  <p class="sec-sub">這不是控訴，而是一份結構性分析。了解市場如何演變，讓你能做出更知情的選擇。</p>
+
+  <div style="background:#fff3cd;border-radius:var(--radius);padding:16px 20px;margin-bottom:28px;border-left:4px solid #f0c040;">
+    <strong style="color:#856404;">本頁立場聲明：</strong><span style="color:#6b4a00;font-size:13px;">本頁不反對矯正、不反對隱形矯正、不反對數位技術。核心立場是：完整診斷與風險透明，是矯正安全的底線。</span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;margin-bottom:32px;">
+    <div style="background:var(--card);border-radius:var(--radius);padding:24px;border:1px solid var(--border);">
+      <div style="font-size:32px;margin-bottom:12px;">📊</div>
+      <h3 style="margin-bottom:10px;">數字揭示的現實</h3>
+      <ul style="font-size:13px;color:var(--text-sub);line-height:1.9;padding-left:16px;">
+        <li>93% 澳洲矯正醫師提供隱形矯正（Meade et al. 2022，434位醫師）</li>
+        <li>數位計畫初次未修改通過率：中位數 0%（大多需調整）</li>
+        <li>每位患者平均需要 2 次精調（refinements）</li>
+        <li>近 80% 的隱形矯正研究發表於近 10 年，品質多為低等（Adel et al. 2023，190篇研究）</li>
+      </ul>
+    </div>
+    <div style="background:var(--card);border-radius:var(--radius);padding:24px;border:1px solid var(--border);">
+      <div style="font-size:32px;margin-bottom:12px;">⚠️</div>
+      <h3 style="margin-bottom:10px;">商品化流程最容易省略什麼？</h3>
+      <ul style="font-size:13px;color:var(--text-sub);line-height:1.9;padding-left:16px;">
+        <li><strong>TMJ 評估</strong>：需要額外時間，且可能影響成交速度</li>
+        <li><strong>呼吸道評估</strong>：可能需轉介睡眠科，打斷流程</li>
+        <li><strong>牙根追蹤</strong>：遠端監控降低回診頻率</li>
+        <li><strong>骨骼分析</strong>：數位模擬只看牙冠，不顯示骨骼資訊</li>
+      </ul>
+    </div>
+    <div style="background:var(--card);border-radius:var(--radius);padding:24px;border:1px solid var(--border);">
+      <div style="font-size:32px;margin-bottom:12px;">🔬</div>
+      <h3 style="margin-bottom:10px;">關鍵研究：省略資訊的代價</h3>
+      <p style="font-size:13px;color:var(--text-sub);line-height:1.7;">Tüfekçi et al. (2024, AJODO)：70位矯正醫師研究<br>
+      只看牙冠計畫 vs 加入牙根+骨骼資訊：<br>
+      <strong style="color:var(--green);">33–43% 的醫師改變了治療計畫（p&lt;0.001）</strong><br>
+      這意味著：省略完整資訊，有超過 1/3 的機率導致錯誤計畫。</p>
+    </div>
+    <div style="background:var(--card);border-radius:var(--radius);padding:24px;border:1px solid var(--border);">
+      <div style="font-size:32px;margin-bottom:12px;">🤖</div>
+      <h3 style="margin-bottom:10px;">AI——解藥還是加速劑？</h3>
+      <p style="font-size:13px;color:var(--text-sub);line-height:1.7;">AI 可以是解藥：輔助完整診斷（Mesquita 2023 meta-analysis：79-90% 一致率）<br>
+      AI 也可以是加速劑：讓「更快的流程」更快，省略 AI 尚無法評估的面向（TMD 觸診、個別化判斷）<br>
+      Polizzi et al. 2024 Umbrella review（11篇 SR）：AI 地標誤差仍超過 2mm 可接受範圍</p>
+    </div>
+  </div>
+
+  <div style="background:linear-gradient(135deg,#1d5940,#2a7a5a);border-radius:var(--radius);padding:28px;color:#fff;margin-bottom:28px;">
+    <h3 style="margin-bottom:12px;font-size:18px;">改變的力量在哪裡？</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;font-size:13px;">
+      <div style="background:rgba(255,255,255,.15);border-radius:10px;padding:14px;">
+        <strong>患者知情</strong><br>了解自己應被評估什麼，並要求它（Stacey et al. 2017 Cochrane：105 RCTs）
+      </div>
+      <div style="background:rgba(255,255,255,.15);border-radius:10px;padding:14px;">
+        <strong>研究社群</strong><br>對複雜案例的長期追蹤研究需增加，特別是 TMD + 呼吸道 + EARR 的整合研究
+      </div>
+      <div style="background:rgba(255,255,255,.15);border-radius:10px;padding:14px;">
+        <strong>專業指引</strong><br>AAO、CSA 等機構的標準化診斷指引（Perry et al. 2020，570位英國矯正醫師共識）
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:12px;flex-wrap:wrap;">
+    <a href="#" onclick="show('secondopinion');return false;" class="btn btn-green">💬 使用第二意見工具</a>
+    <a href="#" onclick="show('assessment');return false;" class="btn btn-ghost">🔍 了解三大安全評估</a>
+    <a href="#" onclick="show('research');return false;" class="btn btn-ghost">📚 查看研究來源</a>
+  </div>
+</div>
+
+<!-- ======================================
+     研究與方法頁
+     ====================================== -->
+<div id="section-research" class="section">
+  <h2 class="sec-title">研究來源與方法</h2>
+  <p class="sec-sub">本站資料的整理方法、文獻來源與使用原則——讓你了解這些資訊的可信度與限制。</p>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;margin-bottom:32px;">
+    <div style="background:var(--card);border-radius:var(--radius);padding:22px;border:1px solid var(--border);border-top:4px solid var(--green);">
+      <h3 style="margin-bottom:10px;color:var(--green);">🔍 Elicit</h3>
+      <p style="font-size:13px;color:var(--text-sub);line-height:1.7;">量化萃取平台。專長：OR/RR/CI 等統計結果、系統性回顧、meta-analysis 的結構化分析。</p>
+      <p style="font-size:12px;color:var(--text-sub);margin-top:8px;">本站使用：21 題組搜尋，優先萃取系統性回顧與 meta-analysis 的定量結果。</p>
+    </div>
+    <div style="background:var(--card);border-radius:var(--radius);padding:22px;border:1px solid var(--border);border-top:4px solid var(--blue);">
+      <h3 style="margin-bottom:10px;color:var(--blue);">🤝 Consensus</h3>
+      <p style="font-size:13px;color:var(--text-sub);line-height:1.7;">AI 共識搜尋平台。專長：跨文獻共識百分比、快速驗證特定主張的研究支持程度。</p>
+      <p style="font-size:12px;color:var(--text-sub);margin-top:8px;">本站使用：21 題組逐題搜尋，作為 Elicit 定量結果的共識驗證。</p>
+    </div>
+    <div style="background:var(--card);border-radius:var(--radius);padding:22px;border:1px solid var(--border);border-top:4px solid var(--orange);">
+      <h3 style="margin-bottom:10px;color:var(--orange);">📖 SciSpace</h3>
+      <p style="font-size:13px;color:var(--text-sub);line-height:1.7;">廣度文獻搜尋與 AI 摘要平台。專長：質性文獻概觀、作者網絡、廣度補充。</p>
+      <p style="font-size:12px;color:var(--text-sub);margin-top:8px;">本站使用：6 組主題搜尋，60 篇結果整合，補充 Elicit 定量萃取之外的廣度文獻。</p>
+    </div>
+  </div>
+
+  <div style="background:var(--card);border-radius:var(--radius);padding:24px;border:1px solid var(--border);margin-bottom:24px;">
+    <h3 style="color:var(--green);margin-bottom:14px;">文獻優先順序</h3>
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:13px;">
+      <div style="display:flex;align-items:center;gap:10px;"><span style="background:var(--green);color:#fff;padding:2px 10px;border-radius:10px;font-weight:700;min-width:32px;text-align:center;">1</span> <strong>系統性回顧（Systematic Review）+ Meta-analysis</strong>：整合多篇研究的最高層次證據</div>
+      <div style="display:flex;align-items:center;gap:10px;"><span style="background:var(--teal);color:#fff;padding:2px 10px;border-radius:10px;font-weight:700;min-width:32px;text-align:center;">2</span> <strong>指引 / 共識文件</strong>：專業學會的臨床實踐建議</div>
+      <div style="display:flex;align-items:center;gap:10px;"><span style="background:var(--blue);color:#fff;padding:2px 10px;border-radius:10px;font-weight:700;min-width:32px;text-align:center;">3</span> <strong>大型前瞻性 RCT</strong>：隨機對照試驗</div>
+      <div style="display:flex;align-items:center;gap:10px;"><span style="background:var(--orange);color:#fff;padding:2px 10px;border-radius:10px;font-weight:700;min-width:32px;text-align:center;">4</span> <strong>高品質橫斷面與觀察性研究</strong>：次要採用</div>
+    </div>
+  </div>
+
+  <div style="background:var(--card);border-radius:var(--radius);padding:24px;border:1px solid var(--border);margin-bottom:24px;">
+    <h3 style="color:var(--green);margin-bottom:14px;">資料使用原則</h3>
+    <ul style="font-size:13px;color:var(--text-sub);line-height:2;padding-left:16px;">
+      <li><strong>不將關聯性寫為因果</strong>：OR=1.84 說的是統計關聯，不是「矯正一定造成 TMD」</li>
+      <li><strong>不外推單一研究</strong>：不同族群、診斷標準、矯正方式，結論可能不同</li>
+      <li><strong>AI 輔助整理</strong>：使用 Claude AI 輔助文獻整理，所有資訊均對應至原始文獻</li>
+      <li><strong>限制聲明</strong>：本站為病患教育用途，非個案醫療診斷建議</li>
+      <li><strong>研究品質標示</strong>：標注研究設計類型，讓讀者判斷證據強度</li>
+    </ul>
+  </div>
+
+  <div style="background:var(--card);border-radius:var(--radius);padding:24px;border:1px solid var(--border);margin-bottom:24px;">
+    <h3 style="color:var(--green);margin-bottom:14px;">本次系統性搜尋主題（21 題）</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:8px;font-size:12.5px;color:var(--text-sub);">
+      <div style="background:var(--green-lt);border-radius:8px;padding:8px 12px;"><strong>A 組 TMJ（4題）</strong><br>矯正-TMD 關聯、風險因子、治療前評估、DC/TMD</div>
+      <div style="background:var(--blue-lt);border-radius:8px;padding:8px 12px;"><strong>B 組 呼吸道（4題）</strong><br>矯正-呼吸道研究、拔牙風險、高風險族群、STOP-BANG</div>
+      <div style="background:var(--orange-lt);border-radius:8px;padding:8px 12px;"><strong>C 組 牙根（3題）</strong><br>EARR 盛行率、風險因子、CBCT vs 傳統影像</div>
+      <div style="background:var(--purple-lt);border-radius:8px;padding:8px 12px;"><strong>D 組 診斷（4題）</strong><br>完整診斷面向、數位模擬限制、整合評估、知情同意</div>
+      <div style="background:var(--green-lt);border-radius:8px;padding:8px 12px;"><strong>E 組 AI（3題）</strong><br>AI 病患教育、治療決策、頭顱測量/TMJ/呼吸道</div>
+      <div style="background:var(--orange-lt);border-radius:8px;padding:8px 12px;"><strong>F 組 市場（3題）</strong><br>數位流程商品化、診斷標準化風險、患者教育工具</div>
+    </div>
+  </div>
+
+  <div style="background:var(--card);border-radius:var(--radius);padding:24px;border:1px solid var(--border);">
+    <h3 style="color:var(--green);margin-bottom:12px;">本站限制說明</h3>
+    <ul style="font-size:13px;color:var(--text-sub);line-height:2;padding-left:16px;">
+      <li>本站資訊為病患教育用途，<strong>不構成個案醫療診斷建議</strong></li>
+      <li>各研究族群、定義、情境不同，請勿直接套用至個人情況</li>
+      <li>AI（Claude）輔助整理的效率與覆蓋度，仍存在選擇性偏誤的可能</li>
+      <li>矯正醫學持續演進，本站資料以 2026 年 4 月前發表的文獻為主</li>
+      <li>詳細的個人風險評估，請諮詢合格的矯正專科醫師</li>
+    </ul>
+  </div>
+
+  <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
+    <a href="#" onclick="show('about');return false;" class="btn btn-ghost">ℹ️ 關於本站</a>
+    <a href="#" onclick="show('assessment');return false;" class="btn btn-green">🔍 前往三大安全評估</a>
+  </div>
+</div>
+
 <div id="lightbox" onclick="closeLb()">
   <button id="lb-close" onclick="closeLb()">✕</button>
   <img id="lb-img" src="" alt="">
@@ -995,7 +1399,7 @@ footer a{color:rgba(255,255,255,.8);}
 <!-- 頁尾 -->
 <footer>
   <strong>矯正治療安全指南</strong> · 氧樂多牙醫診所 趙哲暘醫師<br>
-  🤖 本站由 Claude AI 自動生成，SciSpace 學術文獻資料佐證，僅供衛教參考，不負擔法律責任<br>
+  🤖 本站由 Claude AI 自動生成，Elicit × Consensus × SciSpace 三庫學術文獻佐證，僅供衛教參考，不負擔法律責任<br>
   <a href="#" onclick="show('about');return false;" style="color:rgba(255,255,255,.7);">關於本站</a> ·
   <a href="legal-analysis.pdf" download style="color:rgba(255,255,255,.7);">法律資訊</a> ·
   <a href="https://zheyangzhao.github.io/orthodontic-safety-guide/" target="_blank" style="color:rgba(255,255,255,.7);">公開網址</a>
