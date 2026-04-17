@@ -201,6 +201,13 @@ nav{background:var(--green);position:sticky;top:0;z-index:1000;box-shadow:0 2px 
 .legal-small summary{cursor:pointer;font-size:13px;font-weight:600;color:var(--text-sub);}
 .legal-small p{font-size:12.5px;color:#888;line-height:1.7;margin-top:10px;}
 
+/* ===== FAQ ===== */
+.faq-item{border:1px solid var(--border);border-radius:10px;margin-bottom:10px;overflow:hidden;}
+.faq-q{padding:15px 18px;cursor:pointer;font-size:14px;font-weight:600;display:flex;justify-content:space-between;align-items:center;background:var(--card);transition:.2s;}
+.faq-q:hover{background:var(--green-lt);}
+.faq-a{padding:0 18px;max-height:0;overflow:hidden;transition:max-height .3s ease,padding .3s ease;font-size:13.5px;color:var(--text-sub);line-height:1.8;}
+.faq-a.open{max-height:400px;padding:14px 18px 18px;}
+
 /* ===== 頁尾 ===== */
 footer{background:var(--green-dk);color:rgba(255,255,255,.7);padding:28px 20px;text-align:center;font-size:12.5px;margin-top:20px;}
 footer strong{color:#fff;}
@@ -254,16 +261,16 @@ footer a{color:rgba(255,255,255,.8);}
      ====================================== -->
 <div class="hero">
   <div class="hero-badge">🌟 AI × 學術文獻 × 患者教育</div>
-  <h1>矯正前，先了解這三件事</h1>
-  <p class="hero-sub">矯正不只是讓牙齒變整齊——開始治療前，了解顳顎關節、呼吸道與牙根的評估，讓你與醫師的溝通更有品質。</p>
+  <h1>矯正前，先確認你得到的是完整診斷</h1>
+  <p class="hero-sub">矯正不只是把牙齒排整齊。開始治療前，骨架、呼吸道、顳顎關節與功能，都值得被完整評估——這能讓你與醫師的溝通更有方向。</p>
   <div class="hero-stats">
-    <div class="stat-pill">🦷 顳顎關節 <strong>OR 1.84×</strong> 風險</div>
-    <div class="stat-pill">💨 矯正族群 <strong>14%</strong> 有睡眠呼吸問題</div>
-    <div class="stat-pill">🔬 <strong>72.8%</strong> 患者有牙根微吸收</div>
+    <div class="stat-pill">🦷 顳顎關節 治療前建議評估</div>
+    <div class="stat-pill">💨 呼吸道與睡眠 部分患者需篩查</div>
+    <div class="stat-pill">🔬 牙根狀況 影像追蹤有助監測</div>
   </div>
   <div class="hero-btns">
-    <a href="#" onclick="show('learn');return false;" class="btn btn-white">📖 開始學習</a>
-    <a href="#" onclick="show('quiz');return false;" class="btn btn-outline">✅ 快速自評</a>
+    <a href="#" onclick="show('quiz');return false;" class="btn btn-white">✅ 先做 3 分鐘自評</a>
+    <a href="#" onclick="show('learn');return false;" class="btn btn-outline">📖 了解評估項目</a>
   </div>
 </div>
 
@@ -277,7 +284,7 @@ footer a{color:rgba(255,255,255,.8);}
       <h3>顳顎關節（TMJ）</h3>
       <p>顳顎關節在耳朵前方，負責開口咬合。矯正前若未評估，治療後可能出現彈響、疼痛或開口受限。</p>
       <p style="margin-top:10px;font-size:13px;color:var(--text-sub);">常見症狀：臉頰痠、耳前彈聲、開口受限、頭痛</p>
-      <span class="risk-stat">矯正後風險增加 1.84 倍</span>
+      <span class="risk-stat">部分研究顯示特定情境下 TMJ 症狀有關聯性，建議治療前評估</span>
     </div>
     <div class="risk-card" onclick="show('learn');setPath('beginner')">
       <div class="risk-icon blue">💨</div>
@@ -301,6 +308,35 @@ footer a{color:rgba(255,255,255,.8);}
   </div>
 
   <!-- 快速指引 -->
+  <h2 class="sec-title" style="margin-top:20px;">常見問題</h2>
+  <p class="sec-sub">關於矯正安全評估與這個網站的常見疑問</p>
+  <div id="faq-list">
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">這個網站是不是反對矯正？ <span>▼</span></div>
+      <div class="faq-a">不是。矯正治療在許多情況下是非常有效的選擇，研究也支持其長期效益。這個網站的目的是幫助患者在開始治療前，確認自己得到的是完整的診斷評估——讓你帶著正確的問題去初診，而不是讓你對矯正治療感到恐懼。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">拔牙矯正一定不好嗎？ <span>▼</span></div>
+      <div class="faq-a">不是。拔牙不是問題，缺乏完整診斷才是風險的核心。是否需要拔牙應該由完整的骨架、牙列與功能評估後決定，而不是單純依照牙弓空間計算。這個網站不反對任何特定的矯正方式。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">隱形矯正和傳統矯正，哪種比較安全？ <span>▼</span></div>
+      <div class="faq-a">問題不在於選哪一種工具，而在於是否在完整診斷後才使用它。透明牙套與傳統矯正各有適應症，重要的是醫師有沒有根據你的個別狀況做完整評估後再選擇方式。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">有打鼾或下巴不舒服，矯正前為什麼要特別說？ <span>▼</span></div>
+      <div class="faq-a">打鼾可能與呼吸道空間有關，某些矯正方式可能影響呼吸道配置。下巴不舒服則可能與顳顎關節（TMJ）狀況有關。提前告知醫師，可以讓治療計畫更完整，也有助於選擇對你最合適的治療方式。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">什麼時候應該尋求第二意見？ <span>▼</span></div>
+      <div class="faq-a">當你有以下情況時，尋求第二意見是合理的：諮詢時間很短且沒有說明任何風險評估、自評問卷顯示多個需要注意的因素、或你對治療計畫有疑問或不確定感。第二意見不代表不信任原本的醫師，而是對自己的身體負責。</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">這個網站的資料從哪裡來？可信嗎？ <span>▼</span></div>
+      <div class="faq-a">本站內容由 AI 輔助整理，學術數據引用自 SciSpace 對 456 篇國際論文（2018–2024）的系統性回顧，製作者為趙哲暘醫師。所有重要數據均有來源說明，但每位患者狀況不同，本站僅供衛教參考，不取代個別的醫療評估。</div>
+    </div>
+  </div>
+
   <br>
   <h2 class="sec-title" style="margin-top:20px;">你想怎麼開始？</h2>
   <p class="sec-sub">選擇適合你的學習深度</p>
@@ -419,7 +455,7 @@ footer a{color:rgba(255,255,255,.8);}
         </div>
       </div>
     </div>
-    <div class="info-box">💡 <strong>重點</strong>：進階版強調「問對問題」，比你比醫師更了解標準。帶著數據去諮詢，讓醫師知道你是認真的患者。</div>
+    <div class="info-box">💡 <strong>建議</strong>：了解這些評估項目後，帶著具體問題去初診，能讓諮詢更有方向，幫助你和醫師一起做出更好的治療決策。</div>
   </div>
 
   <!-- 專業篇 -->
@@ -477,12 +513,12 @@ footer a{color:rgba(255,255,255,.8);}
     <div class="video-card">
       <div class="video-thumb">
         <div class="play-btn">▶</div>
-        <div class="vt-title">矯正治療：你沒被告知的三大風險</div>
+        <div class="vt-title">矯正治療：三大安全評估重點</div>
       </div>
       <div class="video-body">
         <span class="video-tag">入門推薦</span>
-        <h4>矯正治療：你沒被告知的三大風險</h4>
-        <p>呼吸道、顳顎關節、牙根吸收——三大核心安全評估，5分鐘帶你了解矯正前的必備知識。</p>
+        <h4>矯正治療：三大安全評估重點</h4>
+        <p>呼吸道、顳顎關節、牙根吸收——5 分鐘帶你了解矯正前三大診斷評估的核心概念。</p>
         <a href="https://notebooklm.google.com/notebook/5867caed-603f-4ac2-8732-0a23d709bb48?artifactId=2b1a4fac-9a64-4b23-a9b7-6c377124432a" target="_blank" class="btn btn-green btn-sm">▶ 立即觀看</a>
       </div>
     </div>
@@ -504,9 +540,9 @@ footer a{color:rgba(255,255,255,.8);}
         <div class="vt-title">矯正知情同意與法律保護</div>
       </div>
       <div class="video-body">
-        <span class="video-tag" style="background:var(--purple-lt);color:var(--purple);">法律保護</span>
-        <h4>矯正知情同意與法律保護</h4>
-        <p>台灣醫療法框架下的知情同意義務與患者應知的六大保護重點。</p>
+        <span class="video-tag" style="background:var(--purple-lt);color:var(--purple);">患者權益</span>
+        <h4>矯正知情同意與患者權益</h4>
+        <p>台灣醫療法框架下的知情同意義務，以及患者在治療前應了解的基本權益。</p>
         <a href="https://notebooklm.google.com/notebook/5867caed-603f-4ac2-8732-0a23d709bb48?artifactId=a62d81c8-eabe-453d-aaa5-04e5c3d452b8" target="_blank" class="btn btn-sm" style="background:var(--purple);color:#fff;">▶ 立即觀看</a>
       </div>
     </div>
@@ -562,7 +598,7 @@ footer a{color:rgba(255,255,255,.8);}
   <div class="gallery-grid">
     <div class="gallery-item" onclick="openLb('slides/slide-6.jpg')">
       <img src="slides/slide-6.jpg" alt="矯正治療前必看！三大安全自評指南">
-      <div class="gallery-cap">矯正治療前必看！三大安全自評指南 <span>顳顎關節 OR=1.84 · OSA 14% · EARR 83.4%</span></div>
+      <div class="gallery-cap">矯正治療前三大安全評估指南 <span>顳顎關節 · 呼吸道與睡眠 · 牙根吸收</span></div>
     </div>
     <div class="gallery-item" onclick="openLb('slides/slide-1.jpg')">
       <img src="slides/slide-1.jpg" alt="矯正前必看：25個關鍵提問與選醫指南">
@@ -574,7 +610,7 @@ footer a{color:rgba(255,255,255,.8);}
     </div>
     <div class="gallery-item" onclick="openLb('slides/slide-5.jpg')">
       <img src="slides/slide-5.jpg" alt="矯正治療安全指南：牙根吸收、法律權益與自我保護">
-      <div class="gallery-cap">牙根吸收、法律權益與自我保護 <span>72.8%發生率 · CBCT監測 · 六大法律要點</span></div>
+      <div class="gallery-cap">牙根吸收、知情同意與評估說明 <span>發生率說明 · CBCT監測 · 知情同意要點</span></div>
     </div>
     <div class="gallery-item" onclick="openLb('slides/slide-4.jpg')">
       <img src="slides/slide-4.jpg" alt="矯正治療安全評估：循證醫學與臨床診斷指南">
@@ -867,8 +903,8 @@ footer a{color:rgba(255,255,255,.8);}
 
   <br>
   <div style="padding:20px 24px; background:linear-gradient(135deg,#fff8e1,#fff3e0); border-radius:12px; border-left:5px solid #e07b39; margin-bottom:20px;">
-    <h3 style="color:#c05e10;margin-bottom:6px;">⚖️ 法律保護資料（患者必備）</h3>
-    <p style="font-size:13.5px;color:#7a4a10;margin-bottom:0;">了解你的醫療權益，是保護自己的第一步。以下資料由 AI 根據台灣醫療法整理，供患者參考。</p>
+    <h3 style="color:#c05e10;margin-bottom:6px;">⚖️ 知情同意與醫療溝通資料</h3>
+    <p style="font-size:13.5px;color:#7a4a10;margin-bottom:0;">了解知情同意的基本內容，能幫助你在諮詢時問出更有建設性的問題，也有助於醫病雙方建立良好溝通。以下資料由 AI 根據台灣醫療法整理，供患者參考。</p>
   </div>
   <div class="dl-grid">
     <div class="dl-card" style="border:2px solid #e07b39;">
@@ -937,12 +973,12 @@ footer a{color:rgba(255,255,255,.8);}
       <li>STEP 10–12：網站製作與 GitHub Pages 部署</li>
     </ul>
     <br>
-    <p><strong>更新日期</strong>：2026-04-02｜<strong>網站版本</strong>：v4.0</p>
+    <p><strong>更新日期</strong>：2026-04-17｜<strong>網站版本</strong>：v4.1（語氣調整版）</p>
   </div>
 
   <div class="about-card" style="border-left:4px solid #e07b39;">
-    <h3>⚖️ 法律保護資訊</h3>
-    <p>本站收錄的法律資訊涵蓋台灣醫療法第 63、70、81 條，以患者保護為核心出發，說明醫師的告知義務與患者申請病歷的權利。此資訊係教育性質，不提供個案法律意見。如有法律糾紛，請諮詢合格律師或聯繫所在縣市衛生局。</p>
+    <h3>⚖️ 知情同意與醫療溝通資訊</h3>
+    <p>本站收錄的醫療法資訊涵蓋台灣醫療法第 63、70、81 條，說明醫師的告知義務與患者了解治療計畫的基本權利。此資訊係教育性質，不提供個案法律意見。如有醫療問題，建議先透過正式管道與醫師溝通，必要時可聯繫所在縣市衛生局。</p>
     <div style="margin-top:14px;display:flex;gap:12px;flex-wrap:wrap;">
       <a href="legal-analysis.pdf" download class="btn btn-orange btn-sm">⬇ 下載法律分析 PDF</a>
       <a href="complaint-guide.pdf" download class="btn btn-orange btn-sm">⬇ 下載申訴指南 PDF</a>
@@ -1071,6 +1107,18 @@ function calcScore() {
 function resetQuiz() {
   document.querySelectorAll('.opt').forEach(b => b.classList.remove('sel', 'sel-warn'));
   document.getElementById('quiz-score-box').style.display = 'none';
+}
+
+// FAQ 開合
+function toggleFaq(el) {
+  const ans = el.nextElementSibling;
+  const isOpen = ans.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-q span').forEach(s => s.textContent = '▼');
+  if (!isOpen) {
+    ans.classList.add('open');
+    el.querySelector('span').textContent = '▲';
+  }
 }
 </script>
 </body>
